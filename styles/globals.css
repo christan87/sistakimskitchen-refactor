@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Russo+One&display=swap');
+
+:root {
+    --brand-orange: #fe750f;
+    --brand-purple: #a600ea; 
+    --brand-neonorange: #ff7f00;
+    --brand-neonpurple: #a600ea; 
+}
+
+body {
+  background-image: linear-gradient(to bottom, var(--brand-neonorange) 0%, var(--brand-neonorange) 30%, var(--brand-neonpurple) 70%, var(--brand-neonpurple) 100%);
+  background-attachment: fixed;
+}
+
+.russo-font{
+  font-family: 'Russo One', sans-serif;
+}
