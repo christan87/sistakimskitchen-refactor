@@ -1,4 +1,4 @@
-import LandingNav from "./components/common/LandingNav"
+import LandingNav from "../components/common/LandingNav"
 export default function Booking() {
     return (
         <div>
