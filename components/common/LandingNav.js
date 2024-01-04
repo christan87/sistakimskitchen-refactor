@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import logo from '../../../public/logo-updated.png';
+import logo from '../../public/logo-updated.png'
 import NeonText from "./NeonText";
 import { HamburgerIcon } from "./HamburgerIcon";
-import styles from '../../../styles/Home.module.css';
+import styles from '../../styles/Home.module.css';
 
 export default function LandingNav() {
     const router = useRouter();
