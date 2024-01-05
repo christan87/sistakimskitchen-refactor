@@ -16,8 +16,8 @@ export default function Home() {
         <section>
           <SimpleSlider />
           <h1>Sista Kim’s Kitchen</h1> 
-          {tests.map((test) => (
-            <div className=' text-slate-50'>
+          {tests.map((test, index) => (
+            <div key={index} className=' text-slate-50'>
               <h1>{test}</h1>
             </div>
           ))}
