@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import Image from "next/image";
 // Import css files
 import "slick-carousel/slick/slick.css";
@@ -15,8 +15,12 @@ import {
     ribs001
 } from '../../public/images/hero';
 
-export default class SimpleSlider extends Component {
-  render() {
+const SimpleSlider = () => {
+    const [currentSlide, setCurrentSlide] = useState();
+    useEffect(() => {
+      setCurrentSlide(0);
+    },[]);
+
     const settings = {
       dots: true,
       infinite: true,
@@ -37,13 +41,35 @@ export default class SimpleSlider extends Component {
           <ul 
             style={{ 
                 margin: "0px", 
-                backgroundColor: 'var(--brand-neonpurple)',
+                // backgroundColor: 'var(--brand-neonpurple)',
+                backgroundColor: 'black',
                 width: 'fit-content',
                 borderTopLeftRadius: '10px',
                 borderTopRightRadius: '10px',
+                display: 'flex',
+                justifyContent: "center",
+                alignItems: "center",
             }}
           > {dots} 
           </ul>
+        </div>
+      ),
+      beforeChange: (current, next) => setCurrentSlide(next),
+      customPaging: i => (
+        <div
+          style={{
+            width: "10px",
+            height: "10px",
+            borderRadius: "50%",
+            // backgroundColor: 'var(--brand-neonorange)',
+            // backgroundColor: 'white',
+            backgroundColor: currentSlide === i ? 'var(--brand-neonorange)' : 'white',
+            border: `2px solid ${currentSlide === i ? 'var(--brand-neonorange)' : 'white'}`,
+            outline: 'none',
+            cursor: 'pointer',
+            transition: 'background-color 0.8s ease, border 0.8s ease',
+          }}
+        >
         </div>
       )
     };
@@ -66,4 +92,5 @@ export default class SimpleSlider extends Component {
       </div>
     );
   }
-}
+
+export default SimpleSlider;

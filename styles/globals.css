@@ -11,10 +11,22 @@
 }
 
 body {
-  background-image: linear-gradient(to bottom, var(--brand-neonorange) 0%, var(--brand-neonorange) 30%, var(--brand-neonpurple) 70%, var(--brand-neonpurple) 100%);
+  /* background-image: linear-gradient(to bottom, var(--brand-neonorange) 0%, var(--brand-neonorange) 30%, var(--brand-neonpurple) 70%, var(--brand-neonpurple) 100%); */
+  background-color: black;
   background-attachment: fixed;
 }
 
 .russo-font{
   font-family: 'Russo One', sans-serif;
+}
+
+/* 
+Overwrides the styling for the <li> containing  the pagination dots for
+the SimpleSlider component from react-slick.
+*/
+.slick-dots li {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 10px !important;
 }
