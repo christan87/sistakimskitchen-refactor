@@ -27,6 +27,10 @@ export default function LandingNav() {
         }
     }, []);
 
+    /**
+     * This useEffect hook is used to add a resize event listener to the window.
+     * The event listener calls the handleResize function whenever the window is resized.
+     */
     useEffect(() => {
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
@@ -39,7 +43,7 @@ export default function LandingNav() {
 
     return ( 
         <div>
-        <nav id="navbar" className={`fixed top-0 left-0 right-0 z-50 bg-slate-950 flex items-center justify-between pl-10 pr-10 ${isScrolled && windowWidth > 640 ? 'nav-expand' : 'nav-collapse'}`}>
+        <nav id="navbar" className={`fixed top-0 left-0 right-0 z-50 bg-slate-950 flex items-center justify-between pl-10 pr-10 ${isScrolled && windowWidth > 640 ? `${styles['nav-expand']}` : `${styles['nav-collapse']}`}`}>
             
             {isScrolled && windowWidth > 640 ?
                 (
@@ -70,14 +74,14 @@ export default function LandingNav() {
                 </button>
             </div>
             <div className={`hidden lg:relative lg:bg-transparent lg:p-0 lg:mt-0 lg:shadow-none lg:flex lg:items-center text-slate-50`}>
-                <Link href="/" className={`nav-link px-2 font-bold ${router.pathname === "/" ? "nav-link-active" : ""}`}>Home</Link>
-                <Link href="/gallery" className={`nav-link px-2 font-bold ${router.pathname === "/gallery" ? "nav-link-active" : ""}`}>Gallery</Link>
-                <Link href="/#" className={`nav-link px-2 font-bold ${router.pathname === "/locations" ? "nav-link-active" : ""}`}>Locations</Link>
-                <Link href="/booking" className={`nav-link px-2 font-bold ${router.pathname === "/booking" ? "nav-link-active" : ""}`}>Booking</Link>
-                <Link href="/#" className="nav-link px-2 font-bold">Order Online</Link>
+                <Link href="/" className={`${styles['nav-link']} px-2 font-bold ${router.pathname === "/" ? `${styles['nav-link-active']}` : ""}`}>Home</Link>
+                <Link href="/gallery" className={`${styles['nav-link']} px-2 font-bold ${router.pathname === "/gallery" ? `${styles['nav-link-active']}` : ""}`}>Gallery</Link>
+                <Link href="/locations" className={`${styles['nav-link']} px-2 font-bold ${router.pathname === "/locations" ? `${styles['nav-link-active']}` : ""}`}>Locations</Link>
+                <Link href="/booking" className={`${styles['nav-link']} px-2 font-bold ${router.pathname === "/booking" ? `${styles['nav-link-active']}` : ""}`}>Booking</Link>
+                <Link href="https://www.clover.com/online-ordering/sister-kims-kitchen-las-vegas" className={`${styles['nav-link-btn']} px-2 font-bold`}>Order Online</Link>
                 <div className="flex ml-10">
-                    <Link href="https://www.instagram.com/sistakimskitchen/"><InstagramIcon color='white' width='30' height='30'/></Link>
-                    <Link href="https://www.facebook.com/Sistakimskitchen/"><FacebookIcon color='white' width='30' height='30'/></Link>
+                    <Link href="https://www.instagram.com/sistakimskitchen/"><InstagramIcon color='var(--brand-purple)' width='30' height='30'className='nav-link-icon'/></Link>
+                    <Link href="https://www.facebook.com/Sistakimskitchen/"><FacebookIcon color='var(--brand-purple)' width='30' height='30' className='nav-link-icon'/></Link>
                 </div>
             </div>
 
@@ -85,8 +89,11 @@ export default function LandingNav() {
         <div className={`fixed top-15 left-0 right-0 z-50 lg:hidden ${isOpen ? `${styles['nav-dropdown']} ${styles['open']}` : `${styles['nav-dropdown']}`} flex flex-col items-center text-center`}>
                 <Link href="/" className={`px-2 font-bold flex-grow border-b border-gray-200 w-full ${router.pathname === "/" ? "" : ""}`}>Home</Link>
                 <Link href="/gallery" className={`px-2 font-bold flex-grow border-b border-gray-200 w-full ${router.pathname === "/gallery" ? "" : ""}`}>Gallery</Link>
+                <Link href="/locations" className={`px-2 font-bold flex-grow border-b border-gray-200 w-full ${router.pathname === "/locations" ? "" : ""}`}>Locations</Link>
                 <Link href="/booking" className={`px-2 font-bold flex-grow border-b border-gray-200 w-full ${router.pathname === "/booking" ? "" : ""}`}>Booking</Link>
-                <Link href="/#" className="px-2 font-bold">Order Online</Link>
+                <Link href="https://www.clover.com/online-ordering/sister-kims-kitchen-las-vegas" className="px-2 font-bold flex-grow border-b border-gray-200 w-full ">Order Online</Link>
+                <Link href="https://www.instagram.com/sistakimskitchen/" className="px-2 font-bold flex-grow border-b border-gray-200 w-full ">Instagram</Link>
+                <Link href="https://www.facebook.com/Sistakimskitchen/" className="px-2 font-bold ">Facebook</Link>
         </div>
         </div>
     )

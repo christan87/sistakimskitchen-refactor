@@ -32,30 +32,6 @@ the SimpleSlider component from react-slick.
   margin: 10px !important;
 }
 
-.nav-link{
-  color: var(--brand-purple) !important;
-}
-
-.nav-link:hover{
-  color: var(--brand-neonorange) !important;
-  text-shadow: 
-  0 0 5px currentColor, 
-  0 0 10px currentColor, 
-  0 0 15px currentColor;
-  transition: ease-in-out 0.9s;
-}
-
-.nav-link-active{
-  color: var(--brand-neonorange) !important;
-  border-bottom: 2px solid var(--brand-neonorange);
-}
-.nav-collapse{
-  height: 144.14px !important;
-  transition: height 0.3s ease-in-out !important;
-}
-
-.nav-expand{
-  height: 108.1px !important;
-  transition: height 0.3s ease-in-out !important;
-
+.Home_slider-img__wxBfh{
+  height: 46.5em !important;
 }
