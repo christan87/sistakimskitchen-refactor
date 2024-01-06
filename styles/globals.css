@@ -33,5 +33,6 @@ the SimpleSlider component from react-slick.
 }
 
 .Home_slider-img__wxBfh{
-  height: 46.5em !important;
+  height: 84vh !important;
+  transition: all 0.3s ease-in-out !important;
 }

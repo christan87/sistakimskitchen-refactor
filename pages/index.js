@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import LandingNav from '../components/common/LandingNav';
-import SimpleSlider from '../components/common/SimpleSlider';
+import HeroSlider from '../components/Landing/HeroSlider';
 
 export default function Home() {
   const tests = [
@@ -14,7 +14,7 @@ export default function Home() {
       <main>
         <LandingNav />
         <section>
-          <SimpleSlider />
+          <HeroSlider />
           <h1>Sista Kim’s Kitchen</h1> 
           {tests.map((test, index) => (
             <div key={index} className=' text-slate-50'>

@@ -15,8 +15,10 @@ import {
     ribs001
 } from '../../public/images/hero';
 
-const SimpleSlider = () => {
+const HeroSlider = () => {
     const [currentSlide, setCurrentSlide] = useState();
+    const [height, setHeight] = useState(0);
+
     useEffect(() => {
       setCurrentSlide(0);
     },[]);
@@ -76,21 +78,21 @@ const SimpleSlider = () => {
     return (
       <div>
         <Slider {...settings} id="mySlider">
-          <div className={`${styles["slider-img"]}`}>
-            <Image src={storefront} alt="Slide 1" layout='fill' objectFit='cover'/>
+          <div className={`${styles["slider-img"]}`} style={{height: `${height}`}}>
+            <Image src={storefront} alt="Slide 1" layout='fill' objectFit='cover' objectPosition='50% 50%'/>
           </div>
           <div className={`${styles["slider-img"]}`}>
-          <Image src={burger001} alt="Slide 1" layout='fill' objectFit='cover'/>
+          <Image src={burger001} alt="Slide 1" layout='fill' objectFit='cover' objectPosition='50% 30%'/>
           </div>
           <div className={`${styles["slider-img"]}`}>
-          <Image src={ribs001} alt="Slide 1" layout='fill' objectFit='cover'/>
+          <Image src={ribs001} alt="Slide 1" layout='fill' objectFit='cover' objectPosition='50% 50%'/>
           </div>
           <div className={`${styles["slider-img"]}`}>
-          <Image src={fish001} alt="Slide 1" layout='fill' objectFit='cover'/>
+          <Image src={fish001} alt="Slide 1" layout='fill' objectFit='cover' objectPosition='50% 50%'/>
           </div>
         </Slider>
       </div>
     );
   }
 
-export default SimpleSlider;
+export default HeroSlider;
