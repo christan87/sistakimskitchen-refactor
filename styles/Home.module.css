@@ -26,6 +26,7 @@
   animation: orange-glow  5s ease-in-out infinite alternate;
 }
 
+/* ================ Navbar ================ */
 .nav-dropdown {
   width: 100%;
   background-color: white;
@@ -95,6 +96,31 @@
   transition: all ease-in-out 0.9s;
 }
 
+/* ================ Landing Sections ================ */
+
+.sec-left-orange{
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-left: 2em;
+  margin-right: 2em;
+  position: relative;
+}
+
+.sec-left-orange::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -50;
+  background-image: url('/images/shapes/brand-orange-shape-001.png');
+  background-repeat: no-repeat;
+  background-size: 100% 90%;
+  opacity: 0.8;  /* Adjust this value to change the opacity */
+}
+
+/* ================ Slider ================ */
 .slider-img {
   position: relative;
   display: flex;
@@ -103,6 +129,7 @@
   overflow: hidden;
 }
 
+/* ================ Animations ================ */
 @keyframes orange-glow {
   from {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--brand-neonorange), 0 0 20px var(--brand-neonorange), 0 0 25px var(--brand-neonorange), 0 0 30px var(--brand-neonorange), 0 0 35px var(--brand-neonorange);

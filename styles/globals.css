@@ -37,6 +37,8 @@ the SimpleSlider component from react-slick.
   height: 84vh !important;
 }
 
+/* Fade Up  */
+
 .fade-up-enter {
   opacity: 0;
   transform: translateY(20px);
@@ -56,5 +58,53 @@ the SimpleSlider component from react-slick.
 .fade-up-appear-active {
   opacity: 1;
   transform: translateY(0);
+  transition: opacity 2000ms, transform 2000ms;
+}
+
+/* Fade Left  */
+
+.fade-left-enter {
+  opacity: 0;
+  transform: translateX(-10%);
+}
+
+.fade-left-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 2000ms, transform 2000ms;
+}
+
+.fade-left-appear {
+  opacity: 0;
+  transform: translateX(-10%);
+}
+
+.fade-left-appear-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 2000ms, transform 2000ms;
+}
+
+/* Fade right  */
+
+.fade-right-enter {
+  opacity: 0;
+  transform: translateX(5%);
+}
+
+.fade-right-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 2000ms, transform 2000ms;
+}
+
+.fade-right-appear {
+  opacity: 0;
+  transform: translateX(5%);
+}
+
+.fade-right-appear-active {
+  opacity: 1;
+  transform: translateX(0);
   transition: opacity 2000ms, transform 2000ms;
 }
