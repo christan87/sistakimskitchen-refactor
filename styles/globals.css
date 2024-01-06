@@ -36,3 +36,25 @@ the SimpleSlider component from react-slick.
   /* height: 46.5em !important; */
   height: 84vh !important;
 }
+
+.fade-up-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.fade-up-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 2000ms, transform 2000ms;
+}
+
+.fade-up-appear {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.fade-up-appear-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 2000ms, transform 2000ms;
+}

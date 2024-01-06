@@ -73,16 +73,16 @@ export default function LandingNav() {
                     <HamburgerIcon />
                 </button>
             </div>
-            <div className={`hidden lg:relative lg:bg-transparent lg:p-0 lg:mt-0 lg:shadow-none lg:flex lg:items-center text-slate-50`}>
+            <div className={`hidden gap-10 lg:relative lg:bg-transparent lg:p-0 lg:mt-0 lg:shadow-none lg:flex lg:items-center`}>
                 <Link href="/" className={`${styles['nav-link']} px-2 font-bold ${router.pathname === "/" ? `${styles['nav-link-active']}` : ""}`}>Home</Link>
                 <Link href="/gallery" className={`${styles['nav-link']} px-2 font-bold ${router.pathname === "/gallery" ? `${styles['nav-link-active']}` : ""}`}>Gallery</Link>
                 <Link href="/locations" className={`${styles['nav-link']} px-2 font-bold ${router.pathname === "/locations" ? `${styles['nav-link-active']}` : ""}`}>Locations</Link>
                 <Link href="/booking" className={`${styles['nav-link']} px-2 font-bold ${router.pathname === "/booking" ? `${styles['nav-link-active']}` : ""}`}>Booking</Link>
                 <Link href="https://www.clover.com/online-ordering/sister-kims-kitchen-las-vegas" className={`${styles['nav-link-btn']} px-2 font-bold`}>Order Online</Link>
-                <div className="flex ml-10">
-                    <Link href="https://www.instagram.com/sistakimskitchen/"><InstagramIcon color='var(--brand-purple)' width='30' height='30'className='nav-link-icon'/></Link>
-                    <Link href="https://www.facebook.com/Sistakimskitchen/"><FacebookIcon color='var(--brand-purple)' width='30' height='30' className='nav-link-icon'/></Link>
-                </div>
+            </div>
+            <div className={`hidden ml-10 lg:relative lg:bg-transparent lg:p-0 lg:mt-0 lg:shadow-none lg:flex lg:items-center`}>
+                <Link href="https://www.instagram.com/sistakimskitchen/"><InstagramIcon color='var(--brand-purple)' width='30' height='30'className='nav-link-icon'/></Link>
+                <Link href="https://www.facebook.com/Sistakimskitchen/"><FacebookIcon color='var(--brand-purple)' width='30' height='30' className='nav-link-icon'/></Link>
             </div>
 
         </nav>
