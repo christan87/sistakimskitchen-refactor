@@ -11,7 +11,12 @@ export default function LandingNav() {
     const router = useRouter();
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const [windowWidth, setWindowWidth] = useState(0);
 
+    /**
+     * This useEffect hook is used to add a scroll event listener to the window.
+     * The event listener calls the handleScroll function whenever the user scrolls.
+     */
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 0);
@@ -22,11 +27,21 @@ export default function LandingNav() {
         }
     }, []);
 
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        }
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        }
+    }, []);
+
     return ( 
         <div>
-        <nav id="navbar" className={`fixed top-0 left-0 right-0 z-50 bg-slate-950 flex items-center justify-between pl-10 pr-10 ${isScrolled ? 'nav-expand' : 'nav-collapse'}`}>
+        <nav id="navbar" className={`fixed top-0 left-0 right-0 z-50 bg-slate-950 flex items-center justify-between pl-10 pr-10 ${isScrolled && windowWidth > 640 ? 'nav-expand' : 'nav-collapse'}`}>
             
-            {isScrolled?
+            {isScrolled && windowWidth > 640 ?
                 (
                 <div className="flex items-center mr-2 transition-all duration-500 transform scale-100">
                     <Image id="brand-img" src={logo} alt="Sista Kim's Kitchen Logo" width={75} height={75} />
@@ -39,7 +54,7 @@ export default function LandingNav() {
                 )
             :
                 (
-                <div className={`flex items-center mr-2 transition-all duration-500 transform ${isScrolled ? 'scale-0' : 'scale-100'}`}>
+                <div className={`flex items-center mr-2 transition-all duration-500 transform ${isScrolled && windowWidth > 640? 'scale-0' : 'scale-100'}`}>
                     <Image id="brand-img" src={logo} alt="Sista Kim's Kitchen Logo" width={100} height={100} />
                     {/* <h1 className="font-bold">SISTA <br /> KIMS</h1> */}
                     <div id="brand-text" >
