@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { CSSTransition } from 'react-transition-group';
 import TrackVisibility from 'react-on-screen';
 import { useMediaQuery } from 'react-responsive';
+import { section01Text } from '../components/constants';
 
 import {
   pastrami001, 
@@ -54,6 +55,8 @@ export default function Home() {
             </CSSTransition>
           </section>
 
+
+          {/* ================ Section 01 ================ */}
           <section className=' mt-10'>
             <TrackVisibility partialVisibility once>
               {({isVisible}) => {
@@ -67,12 +70,14 @@ export default function Home() {
                     classNames="fade-left"
                     mountOnEnter
                   >
-                    <div className='flex flex-wrap text-slate-50'>
-                      <div className={`w-full flex ${isLargeScreen? styles['sec-left-orange-lg'] : styles['sec-left-orange']}`}>
-                        <div>
-                          <Image src={pastrami001} width={500}/>    
+                    <div className='flex flex-wrap'>
+                      <div className={`w-full flex ${styles['sec-left-orange']} ${isLargeScreen && styles['sec-left-orange-bg']} ${!isLargeScreen? 'flex-col' : ''}`}>
+                        <div className={`${!isLargeScreen && 'flex items-center justify-around'}`}>
+                          <Image src={pastrami001} width={500} style={{minWidth: '500px'}}/>    
                         </div>
-                        <div className='sec-text-left-oragnge'>
+                        <div style={{minHeight: '625px'}} className={`ml-4 text-center flex flex-col items-center justify-center ${!isLargeScreen && styles['sec-left-orange-bg']} ${!isLargeScreen && 'mt-10'}`}>
+                          <h2 className='text-3xl font-bold'>Sista Kim's Kitchen</h2>
+                          <p className='text-xl'>{section01Text}</p>
                         </div>
                       </div>
                     </div>
