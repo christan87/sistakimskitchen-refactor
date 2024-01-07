@@ -17,8 +17,7 @@ import {
 
 const HeroSlider = () => {
     const [currentSlide, setCurrentSlide] = useState();
-    const [height, setHeight] = useState(0);
-
+    
     useEffect(() => {
       setCurrentSlide(0);
     },[]);
@@ -80,7 +79,7 @@ const HeroSlider = () => {
     return (
       <div>
         <Slider {...settings} id="mySlider">
-          <div className={`${styles["slider-img"]}`} style={{height: `${height}`}}>
+          <div className={`${styles["slider-img"]}`}>
             <Image src={storefront} alt="Slide 1" layout='fill' objectFit='cover' objectPosition='50% 50%'/>
           </div>
           <div className={`${styles["slider-img"]}`}>
