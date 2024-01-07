@@ -76,7 +76,8 @@ export default function Home() {
                           <Image src={pastrami001} alt="section image" width={500} style={{minWidth: '500px'}}/>    
                         </div>
                         <div style={{minHeight: '625px'}} className={`ml-4 text-center flex flex-col items-center justify-center ${!isLargeScreen && styles['sec-left-orange-bg']} ${!isLargeScreen && 'mt-10'}`}>
-                          <h2 className='text-3xl font-bold'>Sista Kim's Kitchen</h2>
+                          {/* '&apos;' is used in place of (') because  In JSX, certain characters should be escaped to prevent them from being interpreted as code. */}
+                          <h2 className='text-3xl font-bold'>Sista Kim&apos;s Kitchen</h2>
                           <p className='text-xl'>{section01Text}</p>
                         </div>
                       </div>
