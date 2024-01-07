@@ -27,6 +27,12 @@ export default function Home() {
    * This state variable is used to control the visibility of a section (presumably "section 1") in the component.
    */
   const [sec_1_visible, setSec_1_visible] = useState(false);
+  
+  /**
+   * `windowSize` is a state variable in React, which is initially set to `undefined`.
+   * This state variable is used to control the width of a section to account for sizing on smaller screens.
+   */
+  const [windowSize, setWindowSize] = useState({width:undefined, heigth:undefined});
 
   /**
    * `isLargeScreen` is a boolean that is `true` if the screen width is 1024px or larger, and `false` otherwise.
@@ -34,22 +40,26 @@ export default function Home() {
    */
   const isLargeScreen = useMediaQuery({ minWidth: 1024 });
 
-  /**
-   * `isXSmallScreen` is a boolean that is `true` if the screen width is 499px or less, and `false` otherwise.
-   *  This boolean is used to determine if the section width should be adjusted for screens bellow 500px in width.
-   */
-  const isXSmallScreen = useMediaQuery({ maxWidth: 499 });
-
   // In this case, useEffect is used to update the `inProp` state to `true` after the component mounts.
   useEffect(() => {
     setInProp(true);
   },[]);
 
+  // In this case, useEffect is used to update the `windowSize` state to the window width and height after resize.
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({width: window.innerWidth, height: window.innerHeight});
+    }
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    return () => window.removeEventListener('resize', handleResize);
+  },[])
+
   return (
 
       <Layout>
         <main>
-          <section id='hero' style={{width: `${isXSmallScreen? '110vw' : '100vw'}`}}>
+          <section id='hero' >
             <CSSTransition
               in={inProp}
               appear={true}
@@ -63,7 +73,7 @@ export default function Home() {
 
 
           {/* ================ Section 01 ================ */}
-          <section className=' mt-10' style={{width: `${isXSmallScreen? '110vw' : '100vw'}`}}>
+          <section className=' mt-10' >
             <TrackVisibility partialVisibility once>
               {({isVisible}) => {
                 if(isVisible && !sec_1_visible) {
