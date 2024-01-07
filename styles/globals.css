@@ -32,6 +32,7 @@ the SimpleSlider component from react-slick.
   margin: 10px !important;
 }
 
+
 .Home_slider-img__wxBfh{
   /* height: 46.5em !important; */
   height: 84vh !important;
@@ -48,6 +49,10 @@ the SimpleSlider component from react-slick.
   opacity: 1;
   transform: translateY(0);
   transition: opacity 2000ms, transform 2000ms;
+}
+
+.fade-up-enter-done {
+  width: 100% !important;
 }
 
 .fade-up-appear {

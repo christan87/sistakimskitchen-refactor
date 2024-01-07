@@ -34,6 +34,12 @@ export default function Home() {
    */
   const isLargeScreen = useMediaQuery({ minWidth: 1024 });
 
+  /**
+   * `isXSmallScreen` is a boolean that is `true` if the screen width is 499px or less, and `false` otherwise.
+   *  This boolean is used to determine if the section width should be adjusted for screens bellow 500px in width.
+   */
+  const isXSmallScreen = useMediaQuery({ maxWidth: 499 });
+
   // In this case, useEffect is used to update the `inProp` state to `true` after the component mounts.
   useEffect(() => {
     setInProp(true);
@@ -43,7 +49,7 @@ export default function Home() {
 
       <Layout>
         <main>
-          <section id='hero'>
+          <section id='hero' style={{width: `${isXSmallScreen? '110vw' : '100vw'}`}}>
             <CSSTransition
               in={inProp}
               appear={true}
@@ -57,7 +63,7 @@ export default function Home() {
 
 
           {/* ================ Section 01 ================ */}
-          <section className=' mt-10'>
+          <section className=' mt-10' style={{width: `${isXSmallScreen? '110vw' : '100vw'}`}}>
             <TrackVisibility partialVisibility once>
               {({isVisible}) => {
                 if(isVisible && !sec_1_visible) {

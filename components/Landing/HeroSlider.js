@@ -30,7 +30,7 @@ const HeroSlider = () => {
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows:false,
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 6000, // Change this to your desired speed
       appendDots: dots => (
         <div
@@ -84,13 +84,13 @@ const HeroSlider = () => {
             <Image src={storefront} alt="Slide 1" layout='fill' objectFit='cover' objectPosition='50% 50%'/>
           </div>
           <div className={`${styles["slider-img"]}`}>
-          <Image src={burger001} alt="Slide 1" layout='fill' objectFit='cover' objectPosition='50% 30%'/>
+          <Image src={burger001} alt="Slide 2" layout='fill' objectFit='cover' objectPosition='50% 30%'/>
           </div>
           <div className={`${styles["slider-img"]}`}>
-          <Image src={ribs001} alt="Slide 1" layout='fill' objectFit='cover' objectPosition='50% 50%'/>
+          <Image src={ribs001} alt="Slide 3" layout='fill' objectFit='cover' objectPosition='50% 50%'/>
           </div>
           <div className={`${styles["slider-img"]}`}>
-          <Image src={fish001} alt="Slide 1" layout='fill' objectFit='cover' objectPosition='50% 50%'/>
+          <Image src={fish001} alt="Slide 4" layout='fill' objectFit='cover' objectPosition='50% 50%'/>
           </div>
         </Slider>
       </div>
