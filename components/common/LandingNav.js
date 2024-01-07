@@ -73,7 +73,7 @@ export default function LandingNav() {
                     <HamburgerIcon />
                 </button>
             </div>
-            <div className={`hidden gap-10 lg:relative lg:bg-transparent lg:p-0 lg:mt-0 lg:shadow-none lg:flex lg:items-center`}>
+            <div className={`hidden gap-6 lg:relative lg:bg-transparent lg:p-0 lg:mt-0 lg:shadow-none lg:flex lg:items-center`}>
                 <Link href="/" className={`${styles['nav-link']} px-2 font-bold ${router.pathname === "/" ? `${styles['nav-link-active']}` : ""}`}>Home</Link>
                 <Link href="/gallery" className={`${styles['nav-link']} px-2 font-bold ${router.pathname === "/gallery" ? `${styles['nav-link-active']}` : ""}`}>Gallery</Link>
                 <Link href="/locations" className={`${styles['nav-link']} px-2 font-bold ${router.pathname === "/locations" ? `${styles['nav-link-active']}` : ""}`}>Locations</Link>
