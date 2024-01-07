@@ -1,7 +1,9 @@
 import {
-    section01Text
+    loremIpsum01,
+    sistaKimsKitchen
 } from './landing.js';
 
 export{
-    section01Text
+    loremIpsum01,
+    sistaKimsKitchen
 }

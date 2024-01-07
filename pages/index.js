@@ -5,7 +5,10 @@ import Image from 'next/image';
 import { CSSTransition } from 'react-transition-group';
 import TrackVisibility from 'react-on-screen';
 import { useMediaQuery } from 'react-responsive';
-import { section01Text } from '../components/constants';
+import { 
+  loremIpsum01,
+  sistaKimsKitchen 
+} from '../components/constants';
 
 import {
   pastrami001, 
@@ -88,13 +91,13 @@ export default function Home() {
                   >
                     <div className='flex flex-wrap'>
                       <div className={`w-full flex ${styles['sec-left-orange']} ${isLargeScreen && styles['sec-left-orange-bg']} ${!isLargeScreen? 'flex-col' : ''}`}>
-                        <div className={`${!isLargeScreen && 'flex items-center justify-around'}`}>
-                        <Image src={pastrami001} alt="section image" className={`${isLargeScreen? `${styles['sec-left-img']}`: ' w-full'}`} />  
+                        <div className={`${!isLargeScreen && 'flex items-center justify-around pl-4 pr-4'}`}>
+                          <Image src={pastrami001} alt="section image" className={`${isLargeScreen? `${styles['sec-left-img']}`: ' w-full'}`} />  
                         </div>
-                        <div style={{minHeight: '625px'}} className={`lg:ml-4 text-center flex flex-col items-center justify-center ${!isLargeScreen && styles['sec-left-orange-bg']} ${!isLargeScreen && 'mt-10'}`}>
-                          {/* '&apos;' is used in place of (') because  In JSX, certain characters should be escaped to prevent them from being interpreted as code. */}
-                          <h2 className='text-3xl font-bold'>Sista Kim&apos;s Kitchen</h2>
-                          <p className='text-xl'>{section01Text}</p>
+                        {/* <div style={{minHeight: '625px'}} className={`lg:ml-4 text-center flex flex-col items-center justify-center pl-4 pr-4 pb-4 ${!isLargeScreen && styles['sec-left-orange-bg']} ${!isLargeScreen && 'mt-10'}`}> */}
+                        <div style={{minHeight: `${isLargeScreen? '625px' : ''}`}} className={`lg:ml-4 text-center flex flex-col items-center lg:justify-center pl-4 pr-4 pb-4 ${!isLargeScreen && 'mt-10'}`}>
+                          <h2 className='text-3xl font-bold'>{sistaKimsKitchen}</h2>
+                          <p className='text-xl'>{loremIpsum01}</p>
                         </div>
                       </div>
                     </div>
