@@ -69,6 +69,7 @@
 .nav-collapse{
   height: 144.14px !important;
   transition: height 0.3s ease-in-out !important;
+  position: fixed !important;
 }
 
 .nav-expand{
@@ -103,9 +104,10 @@
   font-weight: 700;
   text-shadow: -2px 0 var(--brand-purple), 0 2px var(--brand-purple), 2px 0 var(--brand-purple), 0 -2px var(--brand-purple);
   letter-spacing: 1.5px;  /* Adjust this value to change the letter spacing */
-  padding-left: 2em;
-  padding-right: 2em;
+}
 
+.sec-left-img{
+  min-width: 550px;
 }
 
 .sec-left-orange-bg{

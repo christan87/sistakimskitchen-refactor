@@ -89,9 +89,9 @@ export default function Home() {
                     <div className='flex flex-wrap'>
                       <div className={`w-full flex ${styles['sec-left-orange']} ${isLargeScreen && styles['sec-left-orange-bg']} ${!isLargeScreen? 'flex-col' : ''}`}>
                         <div className={`${!isLargeScreen && 'flex items-center justify-around'}`}>
-                          <Image src={pastrami001} alt="section image" width={500} style={{minWidth: '500px'}}/>    
+                        <Image src={pastrami001} alt="section image" className={`${isLargeScreen? `${styles['sec-left-img']}`: ' w-full'}`} />  
                         </div>
-                        <div style={{minHeight: '625px'}} className={`ml-4 text-center flex flex-col items-center justify-center ${!isLargeScreen && styles['sec-left-orange-bg']} ${!isLargeScreen && 'mt-10'}`}>
+                        <div style={{minHeight: '625px'}} className={`lg:ml-4 text-center flex flex-col items-center justify-center ${!isLargeScreen && styles['sec-left-orange-bg']} ${!isLargeScreen && 'mt-10'}`}>
                           {/* '&apos;' is used in place of (') because  In JSX, certain characters should be escaped to prevent them from being interpreted as code. */}
                           <h2 className='text-3xl font-bold'>Sista Kim&apos;s Kitchen</h2>
                           <p className='text-xl'>{section01Text}</p>

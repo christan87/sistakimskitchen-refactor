@@ -3,7 +3,7 @@ import LandingNav from "./LandingNav";
 
 const Layout = ({ children }) => {
     return(
-        <div className="check-this-div!">
+        <div>
             <LandingNav />
             {children}
         </div>

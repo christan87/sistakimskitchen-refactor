@@ -43,7 +43,7 @@ export default function LandingNav() {
 
     return ( 
         <div>
-        <nav id="navbar" className={`fixed top-0 left-0 right-0 z-50 bg-slate-950 flex items-center justify-between pl-10 pr-10 ${isScrolled && windowWidth > 640 ? `${styles['nav-expand']}` : `${styles['nav-collapse']}`}`}>
+        <nav id="navbar" className={`fixed top-0 left-0 right-0 z-50 bg-slate-950 flex items-center justify-between pl-5 pr-5 sm:pl-10 sm:pr-10 ${isScrolled && windowWidth > 640 ? `${styles['nav-expand']}` : `${styles['nav-collapse']}`}`}>
             
             {isScrolled && windowWidth > 640 ?
                 (
