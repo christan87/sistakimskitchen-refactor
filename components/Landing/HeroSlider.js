@@ -30,7 +30,7 @@ const HeroSlider = () => {
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows:false,
-      autoplay: false,
+      autoplay: true,
       autoplaySpeed: 6000, // Change this to your desired speed
       appendDots: dots => (
         <div
