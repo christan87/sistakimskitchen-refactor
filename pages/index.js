@@ -73,7 +73,7 @@ export default function Home() {
                     <div className='flex flex-wrap'>
                       <div className={`w-full flex ${styles['sec-left-orange']} ${isLargeScreen && styles['sec-left-orange-bg']} ${!isLargeScreen? 'flex-col' : ''}`}>
                         <div className={`${!isLargeScreen && 'flex items-center justify-around'}`}>
-                          <Image src={pastrami001} width={500} style={{minWidth: '500px'}}/>    
+                          <Image src={pastrami001} alt="section image" width={500} style={{minWidth: '500px'}}/>    
                         </div>
                         <div style={{minHeight: '625px'}} className={`ml-4 text-center flex flex-col items-center justify-center ${!isLargeScreen && styles['sec-left-orange-bg']} ${!isLargeScreen && 'mt-10'}`}>
                           <h2 className='text-3xl font-bold'>Sista Kim's Kitchen</h2>
