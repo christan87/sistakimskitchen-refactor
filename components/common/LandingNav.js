@@ -81,8 +81,8 @@ export default function LandingNav() {
                 <Link href="https://www.clover.com/online-ordering/sister-kims-kitchen-las-vegas" className={`${styles['nav-link-btn']} px-2 font-bold`}>Order Online</Link>
             </div>
             <div className={`hidden ml-10 lg:relative lg:bg-transparent lg:p-0 lg:mt-0 lg:shadow-none lg:flex lg:items-center`}>
-                <Link href="https://www.instagram.com/sistakimskitchen/"><InstagramIcon color='var(--brand-purple)' width='30' height='30'className='nav-link-icon'/></Link>
-                <Link href="https://www.facebook.com/Sistakimskitchen/"><FacebookIcon color='var(--brand-purple)' width='30' height='30' className='nav-link-icon'/></Link>
+                <Link href="https://www.instagram.com/sistakimskitchen/"><InstagramIcon color='#fff' width='30' height='30'className='nav-link-icon'/></Link>
+                <Link href="https://www.facebook.com/Sistakimskitchen/"><FacebookIcon color='#fff' width='30' height='30' className='nav-link-icon'/></Link>
             </div>
 
         </nav>
