@@ -4,8 +4,17 @@ import {
     googleReviews
 } from './landing.js';
 
+import {
+    footerAddress,
+    footerPhoneNumber,
+    footerCopyright
+} from './footer.js';
+
 export{
     loremIpsum01,
     sistaKimsKitchen,
-    googleReviews
+    googleReviews,
+    footerAddress,
+    footerPhoneNumber,
+    footerCopyright
 }
