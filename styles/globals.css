@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Russo+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 
 :root {
     --brand-orange: #fe750f;
@@ -11,6 +10,8 @@
     --brand-neonpurple: #a600ea; 
     --brand-gradient-background: rgb(87,3,242);
     --brand-gradient-background-color: linear-gradient(90deg, rgba(87,3,242,1) 0%, rgba(250,1,249,1) 50%, rgba(252,176,69,1) 100%);
+    --brand-gradient-background-reverse: rgb(87,3,242);
+    --brand-gradient-background-reverse-color: linear-gradient(90deg, rgba(252,176,69,1) 0%, rgba(250,1,249,1) 50%, rgba(87,3,242,1) 100%);
 }
 
 body {
@@ -18,6 +19,7 @@ body {
   background-color: black;
   background-attachment: fixed;
   padding-top: 145px; /* makes room for navbar at load time */
+  overflow-x: hidden; /* prevents horizontal scroll bar from appearing */
 }
 
 .russo-font{

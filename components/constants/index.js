@@ -1,9 +1,11 @@
 import {
     loremIpsum01,
-    sistaKimsKitchen
+    sistaKimsKitchen,
+    googleReviews
 } from './landing.js';
 
 export{
     loremIpsum01,
-    sistaKimsKitchen
+    sistaKimsKitchen,
+    googleReviews
 }

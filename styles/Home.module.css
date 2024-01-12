@@ -114,7 +114,8 @@
 
 .sec-header{
   text-transform: uppercase;
-  font-family: 'Amatic SC' sans-serif !important;
+  font-family: 'Amatic SC', sans-serif !important;
+  font-size: 3rem !important;
   background: var(--brand-gradient-background-color);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -125,6 +126,8 @@
   color: #fff;
   font-weight: 700;
   letter-spacing: 1.5px;  /* Adjust this value to change the letter spacing */
+  /* allows text to be highlightable over the border overlay with z-index:1 */
+  z-index: 2;
 }
 
 .sec-btn{
@@ -135,6 +138,8 @@
   padding: 2px 5px;
   text-transform: uppercase;
   transition: ease-in-out 0.9s;
+  /* allows links to be clickable over the border overlay z-index:1 */
+  z-index: 2;
 
 }
 
@@ -229,8 +234,6 @@
   }
 }
 
-
-
 .sec-gradient-bg-overlay::before {
   content: "";
   position: absolute;
@@ -258,6 +261,7 @@
     background-image: url('/images/shapes/brandGradientBorder.png');
   }
 }
+
 /* ================ Slider ================ */
 .slider-img {
   position: relative;
@@ -268,7 +272,100 @@
   overflow: hidden;
 }
 
+/* ================ Scrolling Reviews ================ */
+  /* 
+   * Adjust height this value to match the height of your content 
+   * position: relative; is important for the animation to work as it allows us to make both content bars 100vw wide
+   */
+.scrolling-review {
+  overflow: hidden;
+  display: flex;
+  width: 2500px !important;
+  position: relative;
+  height: 20em; 
+}
+
+.scrolling-review-content{
+  position: absolute;
+  width: 100% !important; /* Twice the width of the parent */
+  animation: scroll 50s linear infinite;
+}
+.scrolling-review-content:hover{
+  animation-play-state: paused;
+}
+
+
+.scrolling-review-content-bar-1 {
+  display: flex;
+  position: absolute;
+  justify-content: space-around;
+  width: 100% !important; /* Twice the width of the parent */
+  color: #fff;
+  background: var(--brand-gradient-background-color);
+}
+
+  /* 
+   * left: 100vw; places the content bar off screen to the right
+   */
+.scrolling-review-content-bar-2 {
+  display: flex;
+  position: absolute;
+  left: 2499px;
+  justify-content: space-around;
+  width: 100% !important; /* Twice the width of the parent */
+  color: #fff;
+  background: var(--brand-gradient-background-reverse-color);
+}
+
+/* ================ Reviews ================ */
+.review {
+  color: #fff;
+  width: 20em;
+  height: 15em
+}
+
+.review-text{
+  /* height: 8em; a height component here will stop text-overflow: ellipsis; from working */
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to display */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.review-link{
+  border: solid 2px #fff;
+  margin-top: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 2.5px;
+}
+
+.review-google{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 100vw;
+  background-color: var(--brand-purple);
+  transition: background-color ease-in-out 0.9s;
+}
+.review-google:hover{
+  background-color: var(--brand-orange);
+  transition: background-color ease-in-out 0.9s;
+}
+
+.review-google-link{
+  color: #fff;
+  font-weight: 700;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 0.5em;
+}
+
 /* ================ Animations ================ */
+
 @keyframes orange-glow {
   from {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--brand-neonorange), 0 0 20px var(--brand-neonorange), 0 0 25px var(--brand-neonorange), 0 0 30px var(--brand-neonorange), 0 0 35px var(--brand-neonorange);
@@ -284,5 +381,14 @@
   }
   to {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--brand-neonpurple), 0 0 40px var(--brand-neonpurple), 0 0 50px var(--brand-neonpurple), 0 0 60px var(--brand-neonpurple), 0 0 70px var(--brand-neonpurple);
+  }
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-100%);
   }
 }

@@ -1,16 +1,21 @@
 import React, {useState, useEffect} from 'react';
-import Layout from '../components/common/Layout';
-import HeroSlider from '../components/Landing/HeroSlider';
 import Image from 'next/image';
 import { CSSTransition } from 'react-transition-group';
-import TrackVisibility from 'react-on-screen';
 import { useMediaQuery } from 'react-responsive';
+import Link from "next/link";
+
+import Layout from '../components/common/Layout';
+import HeroSlider from '../components/Landing/HeroSlider';
+import ScrollingReviews from '../components/Landing/ScrollingReviews';
+import Review from '../components/Landing/Review';
+
+import useOnScreenPersist from '../hooks/useOnScreenPersist';
+
 import { 
   loremIpsum01,
-  sistaKimsKitchen 
+  sistaKimsKitchen,
+  googleReviews
 } from '../components/constants';
-import useOnScreenPersist from '../hooks/useOnScreenPersist';
-import Link from "next/link";
 
 import {
   pastrami001, 
@@ -18,6 +23,9 @@ import {
   brand_orange_shape_001,
   brand_purple_shape_001
 } from '../public/images';
+
+import reviews from '../components/constants/reviews';
+
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
@@ -26,13 +34,6 @@ export default function Home() {
   // `inProp` will be used to toggle the enter/exit states of the CSSTransition component.
   // `inProp` will be used to prevent duplicate rendering when used with the `mountOnEnter` property.
   const [inProp, setInProp] = useState(false);
-
-  /**
-   * `sec_1_visible` is a state variable in React, which is initially set to `false`.
-   * This state variable is used to control the visibility of a section (presumably "section 1") in the component.
-   */
-  const [sec_1_visible, setSec_1_visible] = useState(false);
-  const [sec_2_visible, setSec_2_visible] = useState(false);
   
   /**
    * `windowSize` is a state variable in React, which is initially set to `undefined`.
@@ -53,6 +54,7 @@ export default function Home() {
    */
   const [refSec1, isVisibleSec1] = useOnScreenPersist();
   const [refSec2, isVisibleSec2] = useOnScreenPersist();
+  const [refSec3, isVisibleSec3] = useOnScreenPersist();
 
   // In this case, useEffect is used to update the `inProp` state to `true` after the component mounts.
   useEffect(() => {
@@ -141,6 +143,29 @@ export default function Home() {
                   </div>
                 }
               </div>
+            </CSSTransition>
+          </section>
+
+          {/* ================ Section 03 ================ */}
+          <section ref={refSec3} className='pt-10'>
+            <CSSTransition
+                in={isVisibleSec3}
+                timeout={2000}
+                classNames="fade-up"
+                mountOnEnter
+            >
+              <div>
+                <div className={`${styles['review-google']}`} >
+                  <Link href={googleReviews} className={`${styles['review-google-link']}`} >Read More Reviews</Link>
+                </div>
+                <ScrollingReviews>
+                  <Review review={reviews[0]} />
+                  <Review review={reviews[1]} />
+                  <Review review={reviews[2]} />
+                  <Review review={reviews[3]} />
+                </ScrollingReviews>
+              </div>
+
             </CSSTransition>
           </section>
         </main>
