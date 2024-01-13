@@ -7,7 +7,6 @@ export default function Locations() {
         <Layout>
             <main>
                 <section>
-                    <h1>Locations</h1>
                     <Map />
                 </section>
             </main>

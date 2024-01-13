@@ -336,11 +336,12 @@ animation: orange-glow  5s ease-in-out infinite alternate;
   width: 2500px !important;
   position: relative;
   height: 15em; 
+  overflow: hidden;
 }
 
 .scrolling-review-content{
   position: absolute;
-  width: 100% !important; /* Twice the width of the parent */
+  width: 100% !important; 
   animation: scroll 50s linear infinite;
 }
 .scrolling-review-content:hover{
@@ -352,7 +353,7 @@ animation: orange-glow  5s ease-in-out infinite alternate;
   display: flex;
   position: absolute;
   justify-content: space-around;
-  width: 100% !important; /* Twice the width of the parent */
+  width: 100% !important; 
   color: #fff;
   background: var(--brand-gradient-background-color);
 }
