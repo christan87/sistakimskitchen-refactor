@@ -146,7 +146,7 @@ const Map = ({height='50', heightUnits='vh', width='100', widthUnits='%'}) => {
               closeButton.removeChild(span);
             }
             // Render the CloseIcon component to the closeButton
-            ReactDOM.render(<CloseIcon />, closeButton);
+            ReactDOM.createRoot(closeButton).render(<CloseIcon />);
           }
         }
       });

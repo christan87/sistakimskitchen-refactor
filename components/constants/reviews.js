@@ -1,4 +1,4 @@
-export default [
+const reviews = [
     {
         reviewer: 'Ritchie Coleman',
         date: 'December 2023',
@@ -58,6 +58,7 @@ export default [
     },
 ];
 
+export default reviews;
 /*
 {
     reviewer: '',
