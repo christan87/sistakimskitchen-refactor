@@ -336,7 +336,6 @@ animation: orange-glow  5s ease-in-out infinite alternate;
   width: 2500px !important;
   position: relative;
   height: 15em; 
-  overflow: hidden;
 }
 
 .scrolling-review-content{
@@ -356,7 +355,6 @@ animation: orange-glow  5s ease-in-out infinite alternate;
   width: 100% !important; 
   color: #fff;
   background: var(--brand-gradient-background-color);
-  overflow: hidden;
 }
 
   /* 
@@ -370,7 +368,6 @@ animation: orange-glow  5s ease-in-out infinite alternate;
   width: 100% !important; /* Twice the width of the parent */
   color: #fff;
   background: var(--brand-gradient-background-reverse-color);
-  overflow: hidden;
 }
 
 /* ================ Reviews ================ */
