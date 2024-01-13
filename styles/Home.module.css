@@ -76,13 +76,16 @@
 
 /* ================ Footer ================ */
 .footer{
+  padding-bottom: 5px; /* extends to bottom */
+  color: #fff;
   width: 100vw;
   min-height: 40px;
-  background-color: white;
+  background-color:  #020617;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
 }
 
 .footer-nav{
@@ -123,6 +126,28 @@
 
 .footer-copyright{
 
+}
+
+/* ================ Drawer ================ */
+
+.drawer-persistent{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 350px; /* Adjust as needed */
+  height: 100vh;
+  background-color: #fff;
+  padding-top: 145px; /* makes room for navbar at load time */
+  display: flex;
+  flex-direction: column;
+  padding-left: 1em;
+}
+
+.drawer-persistent-title{
+  font-size: 30px;
+  font-weight:700;
+  text-transform: uppercase;
+  
 }
 
 /* ================ Neon Text ================ */
@@ -426,7 +451,6 @@ animation: orange-glow  5s ease-in-out infinite alternate;
 }
 
 .map-info{
-  background-color: turquoise;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -458,6 +482,20 @@ animation: orange-glow  5s ease-in-out infinite alternate;
 .map-info-link:hover{
   text-decoration: underline;
   cursor: pointer;
+}
+
+/* ================ Location ================ */
+
+.location-drawer{
+  margin-left: 21.9em; /* note: drawer width set to 350px */
+}
+
+.location-drawer-location-title{
+  font-size: 20px;
+}
+
+.location-drawer-location-address{
+  
 }
 
 /* ================ Animations ================ */

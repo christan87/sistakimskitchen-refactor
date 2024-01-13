@@ -4,7 +4,8 @@ import { GoogleMap, LoadScript, InfoWindow } from '@react-google-maps/api';
 import styles from '../../styles/Home.module.css';
 import { CloseIcon } from "../Icons";
 import { sistaKimsKitchen } from '../constants';
-const Map = ({height='50', heightUnits='vh', width='100', widthUnits='%'}) => {
+
+const Map = ({mapReff, height='50', heightUnits='vh', width='100', widthUnits='%'}) => {
 
   const mapsApiKey = process.env.GOOGLE_MAPS_API_KEY;
 
@@ -102,14 +103,15 @@ const Map = ({height='50', heightUnits='vh', width='100', widthUnits='%'}) => {
      lat:36.14097012229575, lng:-115.14272735936078
   }
 
-  const mapRef = useRef();
+  const mapRef = mapReff || useRef();
   const markerRef = useRef();
   const [infoOpen, setInfoOpen] = useState(false);
 
   useEffect(() => {
     if(mapRef.current) {
       // Force a re-render of the Google Map component
-      mapRef.current.forceUpdate();
+      //mapRef.current.forceUpdate();
+      console.log('mapRef.current', mapRef.current);
     }
 
   }, []);
@@ -180,8 +182,6 @@ const Map = ({height='50', heightUnits='vh', width='100', widthUnits='%'}) => {
 
   return (
     <div>
-      <h1>Locations</h1>
-      <LoadScript googleMapsApiKey={mapsApiKey}>
          <GoogleMap
          ref={mapRef}
            mapContainerStyle={mapStyles}
@@ -217,7 +217,7 @@ const Map = ({height='50', heightUnits='vh', width='100', widthUnits='%'}) => {
 
           }
          </GoogleMap>
-       </LoadScript>
+
     </div>
   );
 }

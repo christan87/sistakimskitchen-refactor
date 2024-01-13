@@ -16,8 +16,8 @@ const Footer = () => {
                     <p>{footerPhoneNumber}</p>
                     <p className={`${styles['footer-nav-info-address']}`}>{footerAddress}</p>
                     <div className={`${styles['footer-nav-socials']}`}>
-                        <Link href="https://www.instagram.com/sistakimskitchen/"><InstagramIcon color='black' width='20' height='20'className='nav-link-icon'/></Link>
-                        <Link href="https://www.facebook.com/Sistakimskitchen/"><FacebookIcon color='black' width='20' height='20' className='nav-link-icon'/></Link>
+                        <Link href="https://www.instagram.com/sistakimskitchen/"><InstagramIcon color='white' width='20' height='20'className='nav-link-icon'/></Link>
+                        <Link href="https://www.facebook.com/Sistakimskitchen/"><FacebookIcon color='white' width='20' height='20' className='nav-link-icon'/></Link>
                     </div>
                 </div>
             </div>
