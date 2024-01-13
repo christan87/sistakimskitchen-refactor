@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { GoogleMap, LoadScript, InfoWindow } from '@react-google-maps/api';
 import styles from '../../styles/Home.module.css';
 import { CloseIcon } from "../Icons";
+import { sistaKimsKitchen } from '../constants';
 const Map = ({height='50', heightUnits='vh', width='100', widthUnits='%'}) => {
 
   const mapsApiKey = process.env.GOOGLE_MAPS_API_KEY;
@@ -196,7 +197,7 @@ const Map = ({height='50', heightUnits='vh', width='100', widthUnits='%'}) => {
               options={{ pixelOffset: new window.google.maps.Size(0, -130) }} // Adjust as needed
             >
               <div className={`${styles['map-info']}`}>
-                <h2 className={`${styles['map-info-header']}`}>Sista Kim's Kitchen</h2>
+                <h2 className={`${styles['map-info-header']}`}>{sistaKimsKitchen}</h2>
                 <div className={`${styles['map-info-text']}`}>
                   <p>900 Liberace Ave Suite D-112,</p>
                   <p>Las Vegas, NV 89109</p>
