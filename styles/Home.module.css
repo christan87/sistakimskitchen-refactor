@@ -417,6 +417,47 @@ animation: orange-glow  5s ease-in-out infinite alternate;
   padding-top: 0.5em;
 }
 
+/* ================ Map ================ */
+
+.map{
+
+}
+
+.map-info{
+  background-color: turquoise;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000000;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  padding: 10px !important;
+  background-image: url('/images/map/brandGradientMapInfoBorder.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+} 
+
+.map-info-header{
+  font-weight: 700;
+}
+
+.map-info-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.map-info-link{
+  color: blue;
+}
+
+.map-info-link:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 /* ================ Animations ================ */
 
 @keyframes orange-glow {

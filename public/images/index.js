@@ -18,6 +18,9 @@ import {
     brand_purple_shape_001
  } from './shapes';
 
+ import {  
+    mapPin001
+  } from './map';
 
 export {
     burger001,
@@ -30,5 +33,6 @@ export {
     pastrami001,
     shrimp_poboy001,
     brand_orange_shape_001,
-    brand_purple_shape_001
+    brand_purple_shape_001,
+    mapPin001
 }
