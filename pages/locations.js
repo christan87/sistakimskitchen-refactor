@@ -13,8 +13,7 @@ export default function Locations() {
             const sistaKims = {
                 lat:36.14097012229575, lng:-115.14272735936078
             }
-            map.setCenter(sistaKims);
-            map.setZoom(18)
+            mapRef.current.zoomToLocation(sistaKims, 18);
 
         }
     }
@@ -39,7 +38,7 @@ export default function Locations() {
                                 <button onClick={handleZoom}>Zoom</button>
                             </div>
                         </div>
-                        <Map mapReff={mapRef} height="78" width="100"/>
+                        <Map parentMapRef={mapRef} height="78" width="100"/>
                     </div>
                 </section>
             </main>

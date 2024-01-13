@@ -1,13 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useImperativeHandle } from "react";
 import ReactDOM from 'react-dom';
 import { GoogleMap, LoadScript, InfoWindow } from '@react-google-maps/api';
 import styles from '../../styles/Home.module.css';
 import { CloseIcon } from "../Icons";
 import { sistaKimsKitchen } from '../constants';
 
-const Map = ({mapReff, height='50', heightUnits='vh', width='100', widthUnits='%'}) => {
-
-  const mapsApiKey = process.env.GOOGLE_MAPS_API_KEY;
+const Map = ({parentMapRef, height='50', heightUnits='vh', width='100', widthUnits='%'}) => {
 
   const mapStyles = {        
     height: `${height}${heightUnits}`,
@@ -103,18 +101,21 @@ const Map = ({mapReff, height='50', heightUnits='vh', width='100', widthUnits='%
      lat:36.14097012229575, lng:-115.14272735936078
   }
 
-  const mapRef = mapReff || useRef();
+  const mapRef = useRef();
   const markerRef = useRef();
   const [infoOpen, setInfoOpen] = useState(false);
 
-  useEffect(() => {
-    if(mapRef.current) {
-      // Force a re-render of the Google Map component
-      //mapRef.current.forceUpdate();
-      console.log('mapRef.current', mapRef.current);
-    }
+    // Initialize your map here using mapRef
 
-  }, []);
+    useImperativeHandle(parentMapRef, () => ({
+      zoomToLocation: (location, zoomLevel) => {
+        const map = mapRef.current;
+        if (map) {
+          map.setCenter(location);
+          map.setZoom(zoomLevel);
+        }
+      },
+    }));
 
   // This useEffect is used to style the Google Map InfoWindow
   // The InfoWindow is rendered outside of the React component tree, so it cannot be styled using CSS
