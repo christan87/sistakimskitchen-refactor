@@ -154,7 +154,7 @@ export default function Home() {
                 classNames="fade-up"
                 mountOnEnter
             >
-              <div>
+              <div className={`overflow-hidden`}>
                 <div className={`${styles['review-google']}`} >
                   <Link href={googleReviews} className={`${styles['review-google-link']}`} >Read More Reviews</Link>
                 </div>

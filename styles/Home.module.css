@@ -330,12 +330,14 @@ animation: orange-glow  5s ease-in-out infinite alternate;
    * Adjust height this value to match the height of your content 
    * position: relative; is important for the animation to work as it allows us to make both content bars 100vw wide
    */
+
 .scrolling-review {
   overflow: hidden;
   display: flex;
   width: 2500px !important;
   position: relative;
   height: 15em; 
+  overflow: hidden;
 }
 
 .scrolling-review-content{
