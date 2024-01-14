@@ -456,14 +456,23 @@ animation: orange-glow  5s ease-in-out infinite alternate;
   align-items: center;
   background-color: #000000;
   color: #fff;
-  width: 100%;
-  height: 100%;
+  min-width: 200px;
+  height: fit-content;
+  border-radius: 8px;
   padding: 10px !important;
   background-image: url('/images/map/brandGradientMapInfoBorder.png');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
+  transform: translate(-50%, -300%);
+
 } 
+
+.map-info-close{
+  position: absolute;
+  top: 5px;
+  left: 180px
+}
 
 .map-info-header{
   font-weight: 700;

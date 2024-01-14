@@ -1,6 +1,5 @@
-import React, { useEffect, useRef, useState, useImperativeHandle } from "react";
-import ReactDOM from 'react-dom';
-import { GoogleMap, LoadScript, InfoWindow } from '@react-google-maps/api';
+import React, { useRef, useState, useImperativeHandle } from "react";
+import { GoogleMap, OverlayView } from '@react-google-maps/api';
 import styles from '../../styles/Home.module.css';
 import { CloseIcon } from "../Icons";
 import { sistaKimsKitchen } from '../constants';
@@ -105,6 +104,7 @@ const Map = ({parentMapRef, height='50', heightUnits='vh', width='100', widthUni
   const markerRef = useRef();
   const [infoOpen, setInfoOpen] = useState(false);
 
+
     // Initialize your map here using mapRef
 
     useImperativeHandle(parentMapRef, () => ({
@@ -116,55 +116,6 @@ const Map = ({parentMapRef, height='50', heightUnits='vh', width='100', widthUni
         }
       },
     }));
-
-  // This useEffect is used to style the Google Map InfoWindow
-  // The InfoWindow is rendered outside of the React component tree, so it cannot be styled using CSS
-  useEffect(() => {
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.addedNodes && mutation.addedNodes.length > 0) {
-          const infoWindowWrapper01 = document.querySelector('.gm-style .gm-style-iw-c');
-          const infoWindowWrapper02 = document.querySelector('.gm-style-iw-d');
-          const closeButton = document.querySelector('.gm-ui-hover-effect');
-          if (infoWindowWrapper01) {
-            Object.assign(infoWindowWrapper01.style, {
-              padding: 0,
-            });
-          }
-          if (infoWindowWrapper02) {
-            Object.assign(infoWindowWrapper02.style, {
-              padding: 0,
-              overflow: 'hidden', // removes mystery padding
-            });
-          }
-          if(closeButton) {
-            Object.assign(closeButton.style, {
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              margin: '5px',
-            });
-            // remove the span element from the close button
-            const span = closeButton.querySelector('span');
-            if(span) {
-              closeButton.removeChild(span);
-            }
-            // Render the CloseIcon component to the closeButton
-            ReactDOM.createRoot(closeButton).render(<CloseIcon />);
-          }
-        }
-      });
-    });
-  
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true,
-    });
-  
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
 
   const handleMapLoad = (map) => {
     mapRef.current = map;
@@ -191,13 +142,16 @@ const Map = ({parentMapRef, height='50', heightUnits='vh', width='100', widthUni
            onLoad={handleMapLoad}
            options={mapOptions}
          >
+
           {infoOpen && (
-            <InfoWindow
+            // <InfoWindow> replaced with OverlayView
+            <OverlayView
               position={sistaKims}
-              onCloseClick={() => setInfoOpen(false)}
-              options={{ pixelOffset: new window.google.maps.Size(0, -130) }} // Adjust as needed
+              mapPaneName={OverlayView.OVERLAY_MOUSE_TARGET}
+              options={{ pixelOffset: new window.google.maps.Size(0, -130) }}
             >
               <div className={`${styles['map-info']}`}>
+                <button className={`${styles['map-info-close']}`} onClick={() => setInfoOpen(false)}><CloseIcon/></button>
                 <h2 className={`${styles['map-info-header']}`}>{sistaKimsKitchen}</h2>
                 <div className={`${styles['map-info-text']}`}>
                   <p>900 Liberace Ave Suite D-112,</p>
@@ -213,7 +167,8 @@ const Map = ({parentMapRef, height='50', heightUnits='vh', width='100', widthUni
                   View on Google Maps
                 </a>
               </div>
-            </InfoWindow>
+              </OverlayView>
+            // </InfoWindow>
           )
 
           }
