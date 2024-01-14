@@ -1,7 +1,5 @@
 import {
     loremIpsum01,
-    sistaKimsKitchen,
-    googleReviews
 } from './landing.js';
 
 import {
@@ -10,11 +8,24 @@ import {
     footerCopyright
 } from './footer.js';
 
+import {
+    sistaKimsKitchen,
+    sistaKimsStreetAddress,
+    sistaKimsCityStateZip,
+    sistaKimsStreet,
+    googleReviews,
+    googleMaps
+} from './common.js';
+
 export{
     loremIpsum01,
-    sistaKimsKitchen,
-    googleReviews,
     footerAddress,
     footerPhoneNumber,
-    footerCopyright
+    footerCopyright,
+    sistaKimsKitchen,
+    sistaKimsStreetAddress,
+    sistaKimsCityStateZip,
+    sistaKimsStreet,
+    googleReviews,
+    googleMaps
 }

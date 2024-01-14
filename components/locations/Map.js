@@ -2,7 +2,7 @@ import React, { useRef, useState, useImperativeHandle } from "react";
 import { GoogleMap, OverlayView } from '@react-google-maps/api';
 import styles from '../../styles/Home.module.css';
 import { CloseIcon } from "../Icons";
-import { sistaKimsKitchen } from '../constants';
+import { sistaKimsKitchen, googleMaps } from '../constants';
 
 const Map = ({parentMapRef, height='50', heightUnits='vh', width='100', widthUnits='%'}) => {
 
@@ -130,6 +130,17 @@ const Map = ({parentMapRef, height='50', heightUnits='vh', width='100', widthUni
     markerRef.current.addListener("click", () => {
       setInfoOpen(true);
     });
+
+    // Listen for the visible_changed event on Street View object
+    const streetView = map.getStreetView();
+    streetView.addListener("visible_changed", () => {
+      if(streetView.getVisible()) {
+        //if Street View is visible, hide the marker
+        markerRef.current.setVisible(false);
+      } else {
+        markerRef.current.setVisible(true);
+      }
+    });
   };
 
   return (
@@ -159,7 +170,7 @@ const Map = ({parentMapRef, height='50', heightUnits='vh', width='100', widthUni
                 </div>
 
                 <a 
-                  href={`https://www.google.com/maps/search/?api=1&query=Sista+Kim's+Kitchen`} 
+                  href={googleMaps} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className={`${styles['map-info-link']}`}

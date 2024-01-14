@@ -85,7 +85,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  z-index: 1;
+  position: relative;
+  z-index: 2;
 }
 
 .footer-nav{
@@ -131,16 +132,25 @@
 /* ================ Drawer ================ */
 
 .drawer-persistent{
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 350px; /* Adjust as needed */
   height: 100vh;
   background-color: #fff;
-  padding-top: 145px; /* makes room for navbar at load time */
+  padding-top: 2em; 
+  padding-bottom: 2em; 
+  padding-left: 1em;
+  padding-right: 1em;
   display: flex;
   flex-direction: column;
-  padding-left: 1em;
+
+
+}
+
+@media (max-width: 768px) {
+  .drawer-persistent{
+    height: fit-content;
+    width: 100%;
+    align-items: center;
+  }
 }
 
 .drawer-persistent-title{
@@ -486,6 +496,9 @@ animation: orange-glow  5s ease-in-out infinite alternate;
 
 .map-info-link{
   color: blue;
+  padding-top: 4px;
+  font-weight: 700;
+  font-size: small;
 }
 
 .map-info-link:hover{
@@ -495,18 +508,41 @@ animation: orange-glow  5s ease-in-out infinite alternate;
 
 /* ================ Location ================ */
 
-.location-drawer{
-  margin-left: 21.9em; /* note: drawer width set to 350px */
+.location-map-container{
+  width: 100%;
+  height: 100%;
+}
+
+.location{
+
+  
+}
+
+.location-drawer-location {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
 }
 
 .location-drawer-location-title{
   font-size: 20px;
+  font-weight:700;
 }
 
 .location-drawer-location-address{
-  
+  text-decoration: underline;
 }
 
+.location-drawer-location-hours h2{
+  font-size: 15px;
+  font-weight:700;
+}
+
+.location-drawer-location-zoom-btn{
+  border: solid 2px #000;
+  padding: 5px 10px;
+  margin-top: 10px;
+}
 /* ================ Animations ================ */
 
 @keyframes orange-glow {
