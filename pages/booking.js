@@ -1,11 +1,12 @@
-import LandingNav from "../components/common/LandingNav"
-import Layout from "../components/common/Layout"
+import React from "react";
+import Layout from "../components/common/Layout";
+import ContactForm from "../components/booking/ContactForm";
 export default function Booking() {
     return (
         <Layout>
             <main>
                 <section>
-                    <h1>Booking</h1>
+                    <ContactForm />
                 </section>
             </main>
         </Layout>

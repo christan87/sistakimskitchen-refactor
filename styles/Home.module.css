@@ -543,6 +543,51 @@ animation: orange-glow  5s ease-in-out infinite alternate;
   padding: 5px 10px;
   margin-top: 10px;
 }
+
+/* ================ Contact Form ================ */
+.contact-form{
+}
+
+.contact-form-title{
+  color: #fff;
+}
+
+.contact-form-content{
+
+}
+
+.contact-form-content-name{
+
+}
+
+.contact-form-content-email{
+
+}
+
+.contact-form-content-message{
+  height: 10em;
+}
+
+.contact-form-content-date-time{
+
+}
+
+.contact-form-content-phonenumber{
+
+}
+
+.contact-form-content-submit{
+
+}
+
+.contact-form-content-submit-btn{
+  color: #fff;
+  padding: 5px 10px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: solid 2px #fff;
+
+}
 /* ================ Animations ================ */
 
 @keyframes orange-glow {
