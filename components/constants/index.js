@@ -17,6 +17,12 @@ import {
     googleMaps
 } from './common.js';
 
+import {
+    meats,
+    seafood,
+    sides
+} from './booking.js';
+
 export{
     loremIpsum01,
     footerAddress,
@@ -27,5 +33,8 @@ export{
     sistaKimsCityStateZip,
     sistaKimsStreet,
     googleReviews,
-    googleMaps
+    googleMaps,
+    meats,
+    seafood,
+    sides
 }

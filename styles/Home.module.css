@@ -546,6 +546,7 @@ animation: orange-glow  5s ease-in-out infinite alternate;
 
 /* ================ Contact Form ================ */
 .contact-form{
+  padding: 0 2em;
 }
 
 .contact-form-title{
@@ -588,6 +589,207 @@ animation: orange-glow  5s ease-in-out infinite alternate;
   border: solid 2px #fff;
 
 }
+
+/* ================ Booking ================ */
+
+.booking-header{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+}
+
+.booking-header-content{
+  width: 100%;
+  height: 20em;
+  color: #fff;
+  /* linear-gradient darkens image so Text can be overlayed */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/booking/catering.jpeg');
+  background-size: cover;
+  background-position: center;
+  margin: 0 2em;
+}
+
+.booking-header-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 2em;
+
+}
+
+.booking-header-content p {
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 2em;
+
+}
+
+.booking-hero{
+  padding-top: 2em;
+}
+
+.booking-hero-img{
+
+}
+
+.booking-contact-form{
+  margin-top: 10em;
+}
+
+@media (max-width: 768px) {
+  .booking-contact-form{
+    margin-top: 2em;
+  }
+}
+
+.booking-contactus{
+  color: #fff;
+  padding: 10px;
+  margin: 0 2em;
+  margin-bottom: 4em ;
+}
+
+.booking-contactus h1{
+  font-weight: 700;
+  font-size: 5rem;
+}
+
+.booking-hero-content{
+  display: flex;
+  justify-content: space-around;
+  gap: 1em;
+  padding: 0 2em;
+}
+
+@media (max-width: 1024px) {
+  .booking-hero-content{
+    flex-direction: column;
+  }
+}
+
+/* ================ Catering Card ================ */
+.catering-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 540px;
+  max-width: 645px;
+  background-image: url('/images/shapes/brandGradientBorderMD.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+@media (max-width: 1024px) {
+  .catering-card{
+    flex-direction: row;
+    width: 100%;
+    max-width: 100%;
+    background-image: url('/images/shapes/brandGradientBorder.png');
+  }
+}
+
+@media (max-width: 	768px) {
+  .catering-card{
+    background-image: none;
+    flex-direction: column;
+  }
+}
+
+
+.catering-card-img-div{
+  padding: 7.5px;
+  max-width: 645px;
+  height: 350px;
+  overflow: hidden;
+  
+}
+
+@media (max-width: 1024px) {
+  .catering-card-img-div{
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .catering-card-img-div{
+    width: 100%;
+  }
+}
+
+.catering-card-img-div img{
+ height: 100%;
+ object-fit: cover;
+}
+
+.catering-card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  width: 100%;
+  max-width: 645px;
+
+}
+
+@media (max-width: 1024px) {
+  .catering-card-content{
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .catering-card-content{
+    background-image: url('/images/shapes/brandGradientBorderMd.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+    background-position: center;
+    width: 97.5%;
+  }
+}
+
+
+
+.catering-card-content-title{
+  text-transform: uppercase;
+  font-family: 'Amatic SC', sans-serif !important;
+  font-size: 3rem !important;
+  font-weight: 700;
+  background: var(--brand-gradient-background-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.catering-card-content-text{
+  color: #fff;
+  margin-bottom: 2em;
+  max-width: 75%;
+}
+
+.catering-card-content-btn{
+  color: #fff;
+  border: solid 2px #fff;
+  padding: 5px 10px;
+  margin-bottom: 2em;
+
+}
+
+/* Stacking order for size SM */
+@media (max-width: 768px) {
+  .catering-card-img-div {
+    order: 2;
+  }
+
+  .catering-card-content {
+    order: 1;
+  }
+}
+
 /* ================ Animations ================ */
 
 @keyframes orange-glow {
