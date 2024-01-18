@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Layout from "../components/common/Layout";
 import ContactForm from "../components/booking/ContactForm";
 import styles from "../styles/Home.module.css";
@@ -23,24 +23,27 @@ import {
 
 export default function Booking() {
 
+  const [inProp, setInProp] = useState(false);
+  useEffect(() => { setInProp(true); },[]);
+
+  
   /**
    * useOnScreen Hook
    * This custom React hook is used to determine whether a component is currently visible within the viewport.
    * In this example, the `useOnScreen` hook is used in a `MyComponent` component. The `ref` returned by the hook is attached to the `section` element. The `isVisible` boolean is used to conditionally render the text 'Component is visible' when the `section` element is in the viewport.
    */
 
-  const [refSec1, isVisibleSec1] = useOnScreenPersist();
   const [refSec2, isVisibleSec2] = useOnScreenPersist();
   const [refSec3, isVisibleSec3] = useOnScreenPersist();
   const [refSec4, isVisibleSec4] = useOnScreenPersist();
-  
+
     return (
         <Layout>
             <main>
-                
-                <section ref={refSec1} className={`pt-10 ${styles['booking-header']}`}>
+                {/* ================ Section 01 ================ */}
+                <section className={`pt-20 ${styles['booking-header']}`}>
                     <CSSTransition
-                        in={isVisibleSec1}
+                        in={inProp}
                         timeout={2000}
                         classNames="fade-up"
                         mountOnEnter
@@ -51,10 +54,10 @@ export default function Booking() {
                         </div>
                     </CSSTransition>
                 </section>
-
-                <section ref={refSec2} className={`pt-10 ${styles['booking-hero']}`}>
+                {/* ================ Section 02 ================ */}
+                <section className={`pt-20 ${styles['booking-hero']}`}>
                     <CSSTransition
-                        in={isVisibleSec2}
+                        in={inProp}
                         timeout={2000}
                         classNames="fade-up"
                         mountOnEnter
@@ -66,8 +69,8 @@ export default function Booking() {
                         </div>
                     </CSSTransition>
                 </section>
-
-                <section ref={refSec3} className={`pt-10`}>
+                {/* ================ Section 03 ================ */}
+                <section ref={refSec3} className={`pt-20`}>
                     <CSSTransition
                         in={isVisibleSec3}
                         timeout={2000}
@@ -79,8 +82,8 @@ export default function Booking() {
                         </div>
                     </CSSTransition>
                 </section>
-
-                <section ref={refSec4}>
+                {/* ================ Section 04 ================ */}
+                <section ref={refSec4} className={`pt-20`}>
                     <CSSTransition
                         in={isVisibleSec4}
                         timeout={2000}

@@ -3,14 +3,12 @@ import { useEffect, useRef, useState } from 'react';
 function useOnScreenPersist() {
   const ref = useRef();
   const [isIntersecting, setIntersecting] = useState(false);
-  const [hasIntersected, setHasIntersected] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if(entry.isIntersecting) {
           setIntersecting(entry.isIntersecting);
-          setHasIntersected(true);
         }
       }
     );
@@ -26,7 +24,7 @@ function useOnScreenPersist() {
     };
   }, []); // Empty array ensures that effect is only run on mount and unmount
 
-  return [ref, hasIntersected];
+  return [ref, isIntersecting];
 }
 
 export default useOnScreenPersist;

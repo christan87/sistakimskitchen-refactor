@@ -33,6 +33,7 @@ export default function Home() {
   // Initialize a new state variable `inProp` with a default value of `false`.
   // `inProp` will be used to toggle the enter/exit states of the CSSTransition component.
   // `inProp` will be used to prevent duplicate rendering when used with the `mountOnEnter` property.
+  // `inProp` should be used for any components that are visible at page load to prevent all component using useonScreenPersist from rendering at page load.
   const [inProp, setInProp] = useState(false);
   
   /**
