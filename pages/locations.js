@@ -58,7 +58,7 @@ export default function Locations() {
                             </div>
                         </div>
                         <div className={`${styles['location-map-container']}`}>
-                            <Map parentMapRef={mapRef} height="100" width="100"/>
+                            <Map parentMapRef={mapRef} height="80" width="100"/>
                         </div>
                         
                     </div>
