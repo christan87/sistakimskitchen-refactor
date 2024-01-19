@@ -677,6 +677,7 @@ animation: orange-glow  5s ease-in-out infinite alternate;
   align-items: center;
   width: 540px;
   max-width: 645px;
+  max-height: 650px;
   background-image: url('/images/shapes/brandGradientBorderMD.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -704,7 +705,7 @@ animation: orange-glow  5s ease-in-out infinite alternate;
 .catering-card-img-div{
   padding: 7.5px;
   max-width: 645px;
-  height: 350px;
+  height: 645px;
   overflow: hidden;
   
 }
