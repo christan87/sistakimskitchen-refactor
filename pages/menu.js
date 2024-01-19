@@ -12,12 +12,12 @@ export default function Booking() {
             <main>
                 <section className="pt-20">
                     <div className={`${styles['menu']}`}>
-                        <div className={`pt-10 ${styles['menu-col']}`} >
+                        <div className={`pt-10 ${styles['menu-col']} ${styles['menu-col-1']}`} >
                             <MenuSection menu={menu[0]}/>
                             <MenuSection menu={menu[1]}/>
                             <MenuSection menu={menu[2]}/>
                         </div>
-                        <div className={`${styles['menu-col']}`} >
+                        <div className={`${styles['menu-col']} ${styles['menu-col-2']}`} >
                             <div className={`${styles['menu-col-logo-container']}`}>
                                 <div className={`${styles['menu-col-logo']}`} />
                             </div>
@@ -27,7 +27,7 @@ export default function Booking() {
                             <MenuSection menu={menu[3]}/>
                             <MenuSection menu={menu[4]}/>
                         </div>
-                        <div className={`pt-10 ${styles['menu-col']}`} >
+                        <div className={`pt-10 ${styles['menu-col']} ${styles['menu-col-3']}`} >
                             <MenuSection menu={menu[5]}/>
                             <MenuSection menu={menu[6]}/>
                             <MenuSection menu={menu[7]}/>
