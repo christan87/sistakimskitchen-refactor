@@ -10,7 +10,6 @@ import {
     seafood001,
     sides001,
     wings001,
-    catering001
 } from '/public/images';
 
 import {

@@ -8,10 +8,7 @@ import Slider from "react-slick";
 import {
     storefront,
     burger001,
-    drink001,
     fish001,
-    friedwings001,
-    nachofries,
     ribs001
 } from '../../public/images/hero';
 

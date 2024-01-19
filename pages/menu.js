@@ -1,10 +1,8 @@
 import React from 'react';
 import Layout from '../components/common/Layout';
-import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import MenuSection from '../components/menu/MenuSection';
 import menu from '../components/constants/menu';
-import logo from '/public/logo-updated.png';
 
 export default function Booking() {
     return(

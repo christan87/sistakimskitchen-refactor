@@ -20,8 +20,6 @@ import {
 import {
   pastrami001, 
   shrimp_poboy001,
-  brand_orange_shape_001,
-  brand_purple_shape_001
 } from '../public/images';
 
 import reviews from '../components/constants/reviews';
