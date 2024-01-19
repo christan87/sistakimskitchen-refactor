@@ -63,7 +63,7 @@ the SimpleSlider component from react-slick.
 
 @media (max-width: 768px) {
   .Home_slider-img__wxBfh{
-    height: 58vh !important;
+    height: 65vh !important;
   }
 
   .slick-slider{
