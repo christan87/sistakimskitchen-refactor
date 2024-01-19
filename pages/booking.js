@@ -37,7 +37,7 @@ export default function Booking() {
 
     return (
         <Layout>
-            <main>
+            <main style={{width: '100vw'}}>
                 {/* ================ Section 01 ================ */}
                 <section className={`pt-20 ${styles['booking-header']}`}>
                     <CSSTransition
