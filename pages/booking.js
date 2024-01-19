@@ -32,8 +32,6 @@ export default function Booking() {
    * This custom React hook is used to determine whether a component is currently visible within the viewport.
    * In this example, the `useOnScreen` hook is used in a `MyComponent` component. The `ref` returned by the hook is attached to the `section` element. The `isVisible` boolean is used to conditionally render the text 'Component is visible' when the `section` element is in the viewport.
    */
-
-  const [refSec2, isVisibleSec2] = useOnScreenPersist();
   const [refSec3, isVisibleSec3] = useOnScreenPersist();
   const [refSec4, isVisibleSec4] = useOnScreenPersist();
 
@@ -73,7 +71,7 @@ export default function Booking() {
                 <section ref={refSec3} className={`pt-20`}>
                     <CSSTransition
                         in={isVisibleSec3}
-                        timeout={2000}
+                        timeout={4000}
                         classNames="fade-up"
                         mountOnEnter
                     >

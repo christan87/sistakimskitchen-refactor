@@ -18,6 +18,9 @@ export default function CateringCard({img, title, txt, link="#"}) {
                 <div className={`${styles['catering-card-content-text']}`}>
                     <p>{txt}</p>
                 </div>
+                {/* Spacer */}
+                <div className={`${styles['catering-card-content-spacer']}`} />
+
                 <div className={`${styles['catering-card-content-btn']}`}>
                     <Link href={link}>More</Link>
                 </div>

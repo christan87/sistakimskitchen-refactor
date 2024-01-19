@@ -12,6 +12,7 @@
     --brand-gradient-background-color: linear-gradient(90deg, rgba(87,3,242,1) 0%, rgba(250,1,249,1) 50%, rgba(252,176,69,1) 100%);
     --brand-gradient-background-reverse: rgb(87,3,242);
     --brand-gradient-background-reverse-color: linear-gradient(90deg, rgba(252,176,69,1) 0%, rgba(250,1,249,1) 50%, rgba(87,3,242,1) 100%);
+    --brand-gradient-menu-title-info: linear-gradient(90deg, rgba(197, 36, 50, 1) 0%, rgba(216, 184, 20, 1) 20%, rgba(150, 122, 73, 1) 40%, rgba(226, 236, 61, 1) 60%, rgba(176, 235, 150, 1) 80%, rgba(255, 255, 255, 1) 100%);
 }
 
 body {

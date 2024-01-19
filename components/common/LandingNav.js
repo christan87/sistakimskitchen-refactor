@@ -75,7 +75,7 @@ export default function LandingNav() {
             </div>
             <div className={`hidden gap-6 lg:relative lg:bg-transparent lg:p-0 lg:mt-0 lg:shadow-none lg:flex lg:items-center`}>
                 <Link href="/" className={`${styles['nav-link']} px-2 font-bold ${router.pathname === "/" ? `${styles['nav-link-active']}` : ""}`}>Home</Link>
-                <Link href="/gallery" className={`${styles['nav-link']} px-2 font-bold ${router.pathname === "/gallery" ? `${styles['nav-link-active']}` : ""}`}>Gallery</Link>
+                <Link href="/menu" className={`${styles['nav-link']} px-2 font-bold ${router.pathname === "/menu" ? `${styles['nav-link-active']}` : ""}`}>Menu</Link>
                 <Link href="/locations" className={`${styles['nav-link']} px-2 font-bold ${router.pathname === "/locations" ? `${styles['nav-link-active']}` : ""}`}>Locations</Link>
                 <Link href="/booking" className={`${styles['nav-link']} px-2 font-bold ${router.pathname === "/booking" ? `${styles['nav-link-active']}` : ""}`}>Booking</Link>
                 <Link href="https://www.clover.com/online-ordering/sister-kims-kitchen-las-vegas" className={`${styles['nav-link-btn']} px-2 font-bold`}>Order Online</Link>
@@ -88,7 +88,7 @@ export default function LandingNav() {
         </nav>
         <div className={`fixed top-15 left-0 right-0 z-50 lg:hidden ${isOpen ? `${styles['nav-dropdown']} ${styles['open']}` : `${styles['nav-dropdown']}`} flex flex-col items-center text-center`}>
                 <Link href="/" className={`px-2 font-bold flex-grow border-b border-gray-200 w-full ${router.pathname === "/" ? "" : ""}`}>Home</Link>
-                <Link href="/gallery" className={`px-2 font-bold flex-grow border-b border-gray-200 w-full ${router.pathname === "/gallery" ? "" : ""}`}>Gallery</Link>
+                <Link href="/menu" className={`px-2 font-bold flex-grow border-b border-gray-200 w-full ${router.pathname === "/menu" ? "" : ""}`}>Menu</Link>
                 <Link href="/locations" className={`px-2 font-bold flex-grow border-b border-gray-200 w-full ${router.pathname === "/locations" ? "" : ""}`}>Locations</Link>
                 <Link href="/booking" className={`px-2 font-bold flex-grow border-b border-gray-200 w-full ${router.pathname === "/booking" ? "" : ""}`}>Booking</Link>
                 <Link href="https://www.clover.com/online-ordering/sister-kims-kitchen-las-vegas" className="px-2 font-bold flex-grow border-b border-gray-200 w-full ">Order Online</Link>

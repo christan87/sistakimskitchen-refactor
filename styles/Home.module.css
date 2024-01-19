@@ -732,6 +732,7 @@ animation: orange-glow  5s ease-in-out infinite alternate;
   align-items: center;
   padding: 1em;
   width: 100%;
+  height: 100%;
   max-width: 645px;
 
 }
@@ -769,6 +770,12 @@ animation: orange-glow  5s ease-in-out infinite alternate;
   color: #fff;
   margin-bottom: 2em;
   max-width: 75%;
+  text-align: center;
+}
+
+.catering-card-content-spacer{
+  height: 100%;
+  width: 100%;
 }
 
 .catering-card-content-btn{
@@ -788,6 +795,162 @@ animation: orange-glow  5s ease-in-out infinite alternate;
   .catering-card-content {
     order: 1;
   }
+}
+
+/* ================ Menu ================ */
+
+.menu{
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-header{
+
+}
+
+.menu-col{
+  width: 100%;
+  max-width: 440px;
+  min-height: 450px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 2em;
+}
+
+.menu-col-logo{
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-image: url('/logo-menu.png');
+  background-repeat: no-repeat;
+  background-size: 30% 100%;
+  background-position: center;
+}
+
+.menu-col-logo-container{
+  position: relative;
+  height: 11em;
+  width: 100%;
+}
+
+.menu-col-logo-header{
+
+}
+
+.menu-col-logo-header h1{
+  width: fit-content; /* nessecary for the gradient to fully cover the text */
+  text-transform: uppercase;
+  font-family: 'Amatic SC', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 3rem !important;
+  background: var(--brand-gradient-background-reverse-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+/* ================ MenuSection ================ */
+
+.menu-section{
+  color: #fff;
+  width: 100%;
+  background-color: black;
+  font-family: 'Amatic SC', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+.menu-section-title{
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  height: fit-content !important;
+  position: relative;
+}
+
+@media (max-width: 1488px) {
+  .menu-section-title{
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+}
+
+.menu-section-title-additional{
+  position: relative;
+  width: fit-content;
+}
+
+.menu-section-title h1{
+  width: fit-content; /* nessecary for the gradient to fully cover the text */
+  text-transform: uppercase;
+  font-size: 3rem !important;
+  background: var(--brand-gradient-background-reverse-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+.menu-section-title h2 {
+  text-transform: uppercase;
+  font-size: 2rem !important;
+  padding-top: .5em;
+}
+
+
+@media (max-width: 1488px) {
+  .menu-section-title h2{
+    padding-top: 0;
+  }
+}
+
+.menu-section-title h3 {
+  width: 100%;
+  position: absolute;
+  right: -1.25em;
+  top: -0.5em;
+  text-transform: uppercase;
+  font-size: 1.25rem !important;
+  padding-top: .5em;
+}
+
+
+@media (max-width: 1488px) {
+  .menu-section-title h3{
+    position: absolute;
+    right: -1.25em;
+    top: -1.25em;
+    padding-right: 2em;
+  }
+}
+
+.menu-section-title-info{
+  width: fit-content; /* nessecary for the gradient to fully cover the text */
+  text-transform: uppercase;
+  font-size: 1.5rem !important;
+  background: var(--brand-gradient-menu-title-info);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+.menu-section-items-list{
+  white-space: nowrap;
+}
+
+.menu-section-items-list-item{
+  display: flex;
+  font-size: 1.5rem !important;
+}
+
+.menu-section-items-list-item h1{
+
+}
+
+.menu-section-items-list-item-spacer{
+  width: 1em;
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow: hidden;
 }
 
 /* ================ Animations ================ */
