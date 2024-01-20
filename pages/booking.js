@@ -67,19 +67,6 @@ export default function Booking() {
                     </CSSTransition>
                 </section>
                 {/* ================ Section 03 ================ */}
-                <section ref={refSec3} className={`pt-20`}>
-                    <CSSTransition
-                        in={isVisibleSec3}
-                        timeout={4000}
-                        classNames="fade-up"
-                        mountOnEnter
-                    >
-                        <div className={`${styles['booking-contact-form']}`}>
-                            <ContactForm />
-                        </div>
-                    </CSSTransition>
-                </section>
-                {/* ================ Section 04 ================ */}
                 <section ref={refSec4} className={`pt-20`}>
                     <CSSTransition
                         in={isVisibleSec4}
@@ -91,6 +78,19 @@ export default function Booking() {
                             <h1>Contact Us</h1>
                             <p>Phone: (702) 848 -7333 or (702) 462-5790</p>
                             <p>Email: Sistakimskitchenlv@gmail.com</p>
+                        </div>
+                    </CSSTransition>
+                </section>
+                {/* ================ Section 04 ================ */}
+                <section ref={refSec3} className={``}>
+                    <CSSTransition
+                        in={isVisibleSec3}
+                        timeout={4000}
+                        classNames="fade-up"
+                        mountOnEnter
+                    >
+                        <div className={`${styles['booking-contact-form']}`}>
+                            <ContactForm />
                         </div>
                     </CSSTransition>
                 </section>

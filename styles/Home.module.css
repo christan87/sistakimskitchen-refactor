@@ -547,6 +547,7 @@ animation: orange-glow  5s ease-in-out infinite alternate;
 /* ================ Contact Form ================ */
 .contact-form{
   padding: 0 2em;
+
 }
 
 .contact-form-title{
@@ -557,24 +558,46 @@ animation: orange-glow  5s ease-in-out infinite alternate;
 
 }
 
-.contact-form-content-name{
-
+.contact-form-content-name input{
+  height: 2em;
+  border-radius: 5px;
+  padding: 0 0.5em;
+  font-size: 1.25em;
 }
 
-.contact-form-content-email{
-
+.contact-form-content-email input{
+  height: 2em;
+  border-radius: 5px;
+  padding: 0 0.5em;
+  font-size: 1.25em;
 }
 
-.contact-form-content-message{
+.contact-form-content-message textarea{
   height: 10em;
+  border-radius: 5px;
+  padding: 0.25em 0.5em;
+  font-size: 1.25em;
 }
 
-.contact-form-content-date-time{
-
+.contact-form-content-dropdown select{
+  height: 2em;
+  border-radius: 5px;
+  padding: 0 0.5em;
+  font-size: 1.25em;
 }
 
-.contact-form-content-phonenumber{
+.contact-form-content-date-time input{
+  height: 2em;
+  border-radius: 5px;
+  padding: 0 0.5em;
+  font-size: 1.25em;
+}
 
+.contact-form-content-phonenumber input{
+  height: 2em;
+  border-radius: 5px;
+  padding: 0 0.5em;
+  font-size: 1.25em;
 }
 
 .contact-form-content-submit{
@@ -588,6 +611,10 @@ animation: orange-glow  5s ease-in-out infinite alternate;
   margin-bottom: 1em;
   border: solid 2px #fff;
 
+}
+
+.contact-form-content-group h1{
+  color: #aeacac;
 }
 
 /* ================ Booking ================ */
@@ -636,7 +663,7 @@ animation: orange-glow  5s ease-in-out infinite alternate;
 }
 
 .booking-contact-form{
-  margin-top: 10em;
+  
 }
 
 @media (max-width: 768px) {
