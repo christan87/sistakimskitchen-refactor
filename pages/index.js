@@ -76,7 +76,7 @@ export default function Home() {
 
       <Layout>
         <main>
-          <section id='hero' >
+          {/* <section id='hero' >
             <CSSTransition
               in={inProp}
               appear={true}
@@ -86,7 +86,7 @@ export default function Home() {
             >
               <HeroSlider />
             </CSSTransition>
-          </section>
+          </section> */}
 
 
           {/* ================ Section 01 ================ */}
@@ -148,7 +148,7 @@ export default function Home() {
           </section>
 
           {/* ================ Section 03 ================ */}
-          {/* <section ref={refSec3} className='pt-10'>
+          <section ref={refSec3} className='pt-10'>
             <CSSTransition
                 in={isVisibleSec3}
                 timeout={2000}
@@ -168,7 +168,7 @@ export default function Home() {
               </div>
 
             </CSSTransition>
-          </section> */}
+          </section>
         </main>
       </Layout>  
 
