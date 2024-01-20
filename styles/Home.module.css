@@ -373,7 +373,6 @@ animation: orange-glow  5s ease-in-out infinite alternate;
   width: 200vw !important;
   position: relative;
   height: 15em; 
-  overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -389,10 +388,11 @@ animation: orange-glow  5s ease-in-out infinite alternate;
 }
 
 .scrolling-review-content{
-  position: absolute;
+ display: flex;
   width: 100% !important; 
   animation: scroll 50s linear infinite;
 }
+
 .scrolling-review-content:hover{
   animation-play-state: paused;
 }
@@ -400,7 +400,7 @@ animation: orange-glow  5s ease-in-out infinite alternate;
 
 .scrolling-review-content-bar-1 {
   display: flex;
-  position: absolute;
+
   justify-content: space-around;
   width: 100% !important; 
   color: #fff;
