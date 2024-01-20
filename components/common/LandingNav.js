@@ -11,7 +11,7 @@ export default function LandingNav() {
     const router = useRouter();
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
-    const [windowWidth, setWindowWidth] = useState(0);
+    const [windowWidth, setWindowWidth] = useState(2000); //needs to be set to greater than 640 so that nav brand conditionally renders properly
 
     const logo = 'https://res.cloudinary.com/dxnxtxxep/image/upload/v1705759533/Sista%20Kim%27s/logo-updated_wwjayn.png';
 
@@ -24,10 +24,11 @@ export default function LandingNav() {
             setIsScrolled(window.scrollY > 0);
         }
         window.addEventListener('scroll', handleScroll);
+        console.log('isScrolled: ', isScrolled);
         return () => {
             window.removeEventListener('scroll', handleScroll);
         }
-    }, []);
+    }, [isScrolled]);
 
     /**
      * This useEffect hook is used to add a resize event listener to the window.
@@ -38,10 +39,11 @@ export default function LandingNav() {
             setWindowWidth(window.innerWidth);
         }
         window.addEventListener('resize', handleResize);
+        console.log('windowWidth: ', windowWidth);
         return () => {
             window.removeEventListener('resize', handleResize);
         }
-    }, []);
+    }, [windowWidth]);
 
     return ( 
         <div>
