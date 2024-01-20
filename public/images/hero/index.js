@@ -1,8 +1,7 @@
-import storefront from './storefront.jpg';
-import burger001 from './burger001.jpeg';
-import fish001 from './fish001.jpeg';
-import ribs001 from './ribs001.jpeg';
-
+const burger001 = `https://res.cloudinary.com/dxnxtxxep/image/upload/v1705757210/Sista%20Kim%27s/burger001_papmsi.jpg`;
+const fish001 = `https://res.cloudinary.com/dxnxtxxep/image/upload/v1705757439/Sista%20Kim%27s/fish001_g1e7pj.jpg`;
+const ribs001 = `https://res.cloudinary.com/dxnxtxxep/image/upload/v1705757496/Sista%20Kim%27s/ribs001_wkd1sq.jpg`;
+const storefront = `https://res.cloudinary.com/dxnxtxxep/image/upload/v1705757533/Sista%20Kim%27s/storefront_haknht.jpg`;
 export {
     storefront,
     burger001,

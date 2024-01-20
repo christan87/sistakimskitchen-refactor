@@ -106,7 +106,7 @@ export default function Home() {
                 { isVisibleSec1 &&
                   <div className={`w-full flex ${isLargeScreen && styles['sec-gradient-bg-overlay']} sec-gradient-bg-overlay ${!isLargeScreen? 'flex-col' : ''}`}>
                     <div className={`${!isLargeScreen && 'flex items-center justify-around pl-4 pr-4'}`}>
-                      <Image style={{maxWidth: '640px'}} src={pastrami001} alt="Pastrami Combo With Chili Cheese Fries" className={`${isLargeScreen? `${styles['sec-left-img']}`: ' w-full'}`} />  
+                      <Image style={{maxWidth: '640px'}} width={640} height={0} src={pastrami001} alt="Pastrami Combo With Chili Cheese Fries" className={`${isLargeScreen? `${styles['sec-left-img']}`: ' w-full'}`} />  
                     </div>
                     {/* <div style={{minHeight: '625px'}} className={`lg:ml-4 text-center flex flex-col items-center justify-center pl-4 pr-4 pb-4 ${!isLargeScreen && styles['sec-left-orange-bg']} ${!isLargeScreen && 'mt-10'}`}> */}
                     <div style={{minHeight: `${isLargeScreen? '625px' : ''}`, width: `fit-content`}} className={`lg:ml-4 lg:pl-4 lg:pr-10 lg:pb-4 lg:justify-center flex flex-col items-center  ${styles['sec-text']} ${!isLargeScreen && styles['sec-gradient-bg']} ${!isLargeScreen && 'mt-10 px-5 py-5'}`}>
@@ -139,7 +139,7 @@ export default function Home() {
                       <Link href={orderOnlineLink} className={`${styles['sec-btn']}`} >Order Now</Link>
                     </div>
                     <div className={`${!isLargeScreen && 'flex items-center justify-around pl-4 pr-4 order-1'}`}>
-                      <Image style={{maxWidth: '640px'}} src={shrimp_poboy001} alt="Shrimp Po’boy Combo With Fries" className={`${isLargeScreen? `${styles['sec-right-img']}`: ' w-full'}`} />  
+                      <Image style={{maxWidth: '640px'}} width={640} height={0} src={shrimp_poboy001} alt="Shrimp Po’boy Combo With Fries" className={`${isLargeScreen? `${styles['sec-right-img']}`: ' w-full'}`} />  
                     </div>
                   </div>
                 }

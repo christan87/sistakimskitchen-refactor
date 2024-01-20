@@ -2,6 +2,7 @@ import React, { useRef, useState, useImperativeHandle } from "react";
 import { GoogleMap, OverlayView } from '@react-google-maps/api';
 import styles from '../../styles/Home.module.css';
 import { CloseIcon } from "../Icons";
+import {mapPin001} from '../../public/images';
 import { sistaKimsKitchen, googleMaps } from '../constants';
 
 const Map = ({parentMapRef, height='50', heightUnits='vh', width='100', widthUnits='%'}) => {
@@ -123,7 +124,7 @@ const Map = ({parentMapRef, height='50', heightUnits='vh', width='100', widthUni
       position: sistaKims,
       map: mapRef.current,
       icon: {
-        url: '/images/map/mapPin.png', // URL of your custom marker image
+        url: `${mapPin001}`, // URL of your custom marker image
         scaledSize: new window.google.maps.Size(80, 130), // size of the icon
       }
     });

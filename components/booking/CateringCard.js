@@ -7,7 +7,7 @@ export default function CateringCard({img, title, txt, link="#", imgAlt}) {
     return (
         <div className={`${styles['catering-card']}`}>
             <div className={`${styles['catering-card-img-div']}`}>
-                <Image src={img} alt={imgAlt} className={`${styles['catering-card-img']}`}/>
+                <Image src={img} alt={imgAlt} width={`640`} height={`640`} className={`${styles['catering-card-img']}`}/>
             </div>
             <div className={`${styles['catering-card-content']}`}>
                 <div className={`${styles['catering-card-content-title']}`}>

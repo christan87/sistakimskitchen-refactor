@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import logo from '../../public/logo-updated.png'
 import NeonText from "./NeonText";
 import { HamburgerIcon, FacebookIcon, InstagramIcon } from "../Icons";
 import { orderOnlineLink } from '../constants';
@@ -13,6 +12,8 @@ export default function LandingNav() {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const [windowWidth, setWindowWidth] = useState(0);
+
+    const logo = 'https://res.cloudinary.com/dxnxtxxep/image/upload/v1705759533/Sista%20Kim%27s/logo-updated_wwjayn.png';
 
     /**
      * This useEffect hook is used to add a scroll event listener to the window.

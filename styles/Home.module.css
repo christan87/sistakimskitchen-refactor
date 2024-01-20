@@ -298,7 +298,7 @@ animation: orange-glow  5s ease-in-out infinite alternate;
   width: 100%;
   height: 100%;
   z-index: -50;
-  background-image: url('/images/shapes/brandGradientBorder.png');
+  background-image: url('https://res.cloudinary.com/dxnxtxxep/image/upload/v1705759011/Sista%20Kim%27s/brandGradientBorder_m6vn3g.png');
   background-repeat: no-repeat;
   background-size: 98% 90%;
   background-position: center;
@@ -330,7 +330,7 @@ animation: orange-glow  5s ease-in-out infinite alternate;
   width: 100%;
   height: 100%;
   z-index: 1;
-  background-image: url('/images/shapes/brandGradientBorder.png');
+  background-image: url('https://res.cloudinary.com/dxnxtxxep/image/upload/v1705759011/Sista%20Kim%27s/brandGradientBorder_m6vn3g.png');
   background-repeat: no-repeat;
   background-size: 98% 90%;
   background-position: center;
@@ -339,14 +339,14 @@ animation: orange-glow  5s ease-in-out infinite alternate;
 @media (max-width: 1024px) {
   .sec-gradient-bg::before {
     background-size: 97% 100%;
-    background-image: url('/images/shapes/brandGradientBorderMD.png');
+    background-image: url('https://res.cloudinary.com/dxnxtxxep/image/upload/v1705759012/Sista%20Kim%27s/brandGradientBorderMD_jrinxh.png');
   }
 }
 
 @media (max-width: 768px) {
   .sec-gradient-bg::before {
     background-size: 97% 100%;
-    background-image: url('/images/shapes/brandGradientBorder.png');
+    background-image: url('https://res.cloudinary.com/dxnxtxxep/image/upload/v1705759011/Sista%20Kim%27s/brandGradientBorder_m6vn3g.png');
   }
 }
 
@@ -470,7 +470,7 @@ animation: orange-glow  5s ease-in-out infinite alternate;
   height: fit-content;
   border-radius: 8px;
   padding: 10px !important;
-  background-image: url('/images/map/brandGradientMapInfoBorder.png');
+  background-image: url('https://res.cloudinary.com/dxnxtxxep/image/upload/v1705758799/Sista%20Kim%27s/brandGradientMapInfoBorder_sdryr5.png');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
@@ -631,7 +631,7 @@ animation: orange-glow  5s ease-in-out infinite alternate;
   height: 20em;
   color: #fff;
   /* linear-gradient darkens image so Text can be overlayed */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/booking/catering.jpeg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://res.cloudinary.com/dxnxtxxep/image/upload/v1705757606/Sista%20Kim%27s/catering_vbhs29.jpg');
   background-size: cover;
   background-position: center;
   margin: 0 2em;
@@ -705,7 +705,7 @@ animation: orange-glow  5s ease-in-out infinite alternate;
   width: 540px;
   max-width: 645px;
   max-height: 650px;
-  background-image: url('/images/shapes/brandGradientBorderMD.png');
+  background-image: url('https://res.cloudinary.com/dxnxtxxep/image/upload/v1705759012/Sista%20Kim%27s/brandGradientBorderMD_jrinxh.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-size: 100% 100%;
@@ -717,7 +717,7 @@ animation: orange-glow  5s ease-in-out infinite alternate;
     flex-direction: row;
     width: 100%;
     max-width: 100%;
-    background-image: url('/images/shapes/brandGradientBorder.png');
+    background-image: url('https://res.cloudinary.com/dxnxtxxep/image/upload/v1705759011/Sista%20Kim%27s/brandGradientBorder_m6vn3g.png');
   }
 }
 
@@ -773,7 +773,7 @@ animation: orange-glow  5s ease-in-out infinite alternate;
 
 @media (max-width: 768px) {
   .catering-card-content{
-    background-image: url('/images/shapes/brandGradientBorderMd.png');
+    background-image: url('https://res.cloudinary.com/dxnxtxxep/image/upload/v1705759012/Sista%20Kim%27s/brandGradientBorderMD_jrinxh.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-size: 100% 100%;
@@ -881,7 +881,7 @@ animation: orange-glow  5s ease-in-out infinite alternate;
   height: 100%;
   width: 100%;
   z-index: -1;
-  background-image: url('/logo-menu.png');
+  background-image: url('https://res.cloudinary.com/dxnxtxxep/image/upload/v1705759533/Sista%20Kim%27s/logo-menu_pkqyav.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;

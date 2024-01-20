@@ -10,17 +10,16 @@ import {
     shrimp_poboy001
  } from "./instagram";
 
- import {  
-    mapPin001
-  } from './map';
+import {  
+  mapPin001
+} from './map';
 
-  // all needed
-  import {
-    seafood001,
-    sides001,
-    wings001,
-    catering001
-  } from './booking';
+import {
+  seafood001,
+  sides001,
+  wings001,
+  catering001
+} from './booking';
 
 export {
     burger001,
@@ -35,26 +34,3 @@ export {
     wings001,
     catering001
 }
-
-/*
-
-index.js
-  pastrami001, 
-  shrimp_poboy001,
-
-Slider
-    storefront,
-    burger001,
-    fish001,
-    ribs001
-
-booking.js
-
-    seafood001,
-    sides001,
-    wings001,
-
-css
-'/images/booking/catering.jpeg'
-
-*/
