@@ -76,7 +76,7 @@ export default function Home() {
 
       <Layout>
         <main>
-          {/* <section id='hero' >
+          <section id='hero' >
             <CSSTransition
               in={inProp}
               appear={true}
@@ -86,7 +86,7 @@ export default function Home() {
             >
               <HeroSlider />
             </CSSTransition>
-          </section> */}
+          </section>
 
 
           {/* ================ Section 01 ================ */}
