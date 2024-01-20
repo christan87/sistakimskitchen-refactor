@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import logo from '../../public/logo-updated.png'
 import NeonText from "./NeonText";
 import { HamburgerIcon, FacebookIcon, InstagramIcon } from "../Icons";
+import { orderOnlineLink } from '../constants';
 import styles from '../../styles/Home.module.css';
 
 export default function LandingNav() {
@@ -78,7 +79,7 @@ export default function LandingNav() {
                 <Link href="/menu" className={`${styles['nav-link']} px-2 font-bold ${router.pathname === "/menu" ? `${styles['nav-link-active']}` : ""}`}>Menu</Link>
                 <Link href="/locations" className={`${styles['nav-link']} px-2 font-bold ${router.pathname === "/locations" ? `${styles['nav-link-active']}` : ""}`}>Locations</Link>
                 <Link href="/booking" className={`${styles['nav-link']} px-2 font-bold ${router.pathname === "/booking" ? `${styles['nav-link-active']}` : ""}`}>Booking</Link>
-                <Link href="https://www.clover.com/online-ordering/sister-kims-kitchen-las-vegas" className={`${styles['nav-link-btn']} px-2 font-bold`}>Order Online</Link>
+                <Link href={orderOnlineLink} className={`${styles['nav-link-btn']} px-2 font-bold`}>Order Online</Link>
             </div>
             <div className={`hidden ml-10 lg:relative lg:bg-transparent lg:p-0 lg:mt-0 lg:shadow-none lg:flex lg:items-center`}>
                 <Link href="https://www.instagram.com/sistakimskitchen/"><InstagramIcon color='#fff' width='30' height='30'className='nav-link-icon'/></Link>

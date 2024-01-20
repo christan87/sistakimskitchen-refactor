@@ -1,5 +1,7 @@
 import {
     loremIpsum01,
+    pastramiCombo,
+    shrimpPoBoiCombo
 } from './landing.js';
 
 import {
@@ -14,7 +16,8 @@ import {
     sistaKimsCityStateZip,
     sistaKimsStreet,
     googleReviews,
-    googleMaps
+    googleMaps,
+    orderOnlineLink
 } from './common.js';
 
 import {
@@ -25,6 +28,8 @@ import {
 
 export{
     loremIpsum01,
+    pastramiCombo,
+    shrimpPoBoiCombo,
     footerAddress,
     footerPhoneNumber,
     footerCopyright,
@@ -34,6 +39,7 @@ export{
     sistaKimsStreet,
     googleReviews,
     googleMaps,
+    orderOnlineLink,
     meats,
     seafood,
     sides

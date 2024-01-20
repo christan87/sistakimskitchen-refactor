@@ -60,9 +60,9 @@ export default function Booking() {
                         mountOnEnter
                     >
                         <div className={`${styles['booking-hero-content']}`}>
-                            <CateringCard img={wings001} title={`Meats`} txt={meats}/>
-                            <CateringCard img={seafood001} title={`Seafood`} txt={seafood}/>
-                            <CateringCard img={sides001} title={`Sides`} txt={sides}/>
+                            <CateringCard img={wings001} imgAlt={`Buffalo Wings`} title={`Meats`} txt={meats} link={`/menu`}/>
+                            <CateringCard img={seafood001} imgAlt={`Crab Boil`} title={`Seafood`} txt={seafood} link={`/menu`}/>
+                            <CateringCard img={sides001} imgAlt={`Collard Greens`} title={`Sides`} txt={sides} link={`/menu`}/>
                         </div>
                     </CSSTransition>
                 </section>

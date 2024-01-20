@@ -77,16 +77,20 @@ const HeroSlider = () => {
       <div>
         <Slider {...settings} id="mySlider">
           <div className={`${styles["slider-img"]}`}>
-            <Image src={storefront} alt="Slide 1" layout='fill' objectFit='cover' objectPosition='50% 50%'/>
+            <Image src={storefront} alt="Slide 1 Watermelon Drink" layout='fill' objectFit='cover' objectPosition='50% 50%'/>
+            <div className={`${styles["slider-img-content"]}`}>
+              <p>Test Text</p>
+              <button>Test</button>
+            </div>
           </div>
           <div className={`${styles["slider-img"]}`}>
-          <Image src={burger001} alt="Slide 2" layout='fill' objectFit='cover' objectPosition='50% 30%'/>
+          <Image src={burger001} alt="Slide 2 Cheese Burger" layout='fill' objectFit='cover' objectPosition='50% 30%'/>
           </div>
           <div className={`${styles["slider-img"]}`}>
-          <Image src={ribs001} alt="Slide 3" layout='fill' objectFit='cover' objectPosition='50% 50%'/>
+          <Image src={ribs001} alt="Slide 3 Ribs" layout='fill' objectFit='cover' objectPosition='50% 50%'/>
           </div>
           <div className={`${styles["slider-img"]}`}>
-          <Image src={fish001} alt="Slide 4" layout='fill' objectFit='cover' objectPosition='50% 50%'/>
+          <Image src={fish001} alt="Slide 4 Catfish Combo With Yams and Mac and Cheese" layout='fill' objectFit='cover' objectPosition='50% 50%'/>
           </div>
         </Slider>
       </div>

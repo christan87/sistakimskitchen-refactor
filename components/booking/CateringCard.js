@@ -3,11 +3,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../../styles/Home.module.css';
 
-export default function CateringCard({img, title, txt, link="#"}) {
+export default function CateringCard({img, title, txt, link="#", imgAlt}) {
     return (
         <div className={`${styles['catering-card']}`}>
             <div className={`${styles['catering-card-img-div']}`}>
-                <Image src={img} alt="Seafood" className={`${styles['catering-card-img']}`}/>
+                <Image src={img} alt={imgAlt} className={`${styles['catering-card-img']}`}/>
             </div>
             <div className={`${styles['catering-card-content']}`}>
                 <div className={`${styles['catering-card-content-title']}`}>
