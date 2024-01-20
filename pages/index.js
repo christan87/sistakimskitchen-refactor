@@ -148,7 +148,13 @@ export default function Home() {
           </section>
 
           {/* ================ Section 03 ================ */}
-          <section ref={refSec3} className='pt-10'>
+          {/* <section ref={refSec3} className='pt-10'>
+            <CSSTransition
+                in={isVisibleSec3}
+                timeout={2000}
+                classNames="fade-up"
+                mountOnEnter
+            >
               <div className={`overflow-hidden`}>
                 <div className={`${styles['review-google']}`} >
                   <Link href={googleReviews} className={`${styles['review-google-link']}`} >Read More Reviews</Link>
@@ -160,7 +166,9 @@ export default function Home() {
                   <Review review={reviews[3]} />
                 </ScrollingReviews>
               </div>
-          </section>
+
+            </CSSTransition>
+          </section> */}
         </main>
       </Layout>  
 
