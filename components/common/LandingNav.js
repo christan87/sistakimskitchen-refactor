@@ -49,25 +49,29 @@ export default function LandingNav() {
             
             {isScrolled && windowWidth > 640 ?
                 (
-                <div className="flex items-center mr-2 transition-all duration-500 transform scale-100">
-                    <Image id="brand-img" src={logo} alt="Sista Kim's Kitchen Logo" width={75} height={75} />
-                    {/* <h1 className="font-bold">SISTA <br /> KIMS</h1> */}
-                    <div id="brand-text" className="flex gap-2">
-                        <NeonText text="SISTA" color="neonpurple-text" />
-                        <NeonText text="KIM'S" color="neonorange-text"/>
+                <Link href="/">    
+                    <div className="flex items-center mr-2 transition-all duration-500 transform scale-100">
+                        <Image id="brand-img" src={logo} alt="Sista Kim's Kitchen Logo" width={75} height={75} />
+                        {/* <h1 className="font-bold">SISTA <br /> KIMS</h1> */}
+                        <div id="brand-text" className="flex gap-2">
+                            <NeonText text="SISTA" color="neonpurple-text" />
+                            <NeonText text="KIM'S" color="neonorange-text"/>
+                        </div>
                     </div>
-                </div>
+                </Link>
                 )
             :
                 (
-                <div className={`flex items-center mr-2 transition-all duration-500 transform ${isScrolled && windowWidth > 640? 'scale-0' : 'scale-100'}`}>
-                    <Image id="brand-img" src={logo} alt="Sista Kim's Kitchen Logo" width={100} height={100} />
-                    {/* <h1 className="font-bold">SISTA <br /> KIMS</h1> */}
-                    <div id="brand-text" >
-                        <NeonText text="SISTA" color="neonpurple-text" />
-                        <NeonText text="KIM'S" color="neonorange-text"/>
-                    </div>
-                </div> 
+                <Link href="/"> 
+                    <div className={`flex items-center mr-2 transition-all duration-500 transform ${isScrolled && windowWidth > 640? 'scale-0' : 'scale-100'}`}>
+                        <Image id="brand-img" src={logo} alt="Sista Kim's Kitchen Logo" width={100} height={100} />
+                        {/* <h1 className="font-bold">SISTA <br /> KIMS</h1> */}
+                        <div id="brand-text" >
+                            <NeonText text="SISTA" color="neonpurple-text" />
+                            <NeonText text="KIM'S" color="neonorange-text"/>
+                        </div>
+                    </div> 
+                </Link>
                 )
             }
             <div className="lg:hidden">
