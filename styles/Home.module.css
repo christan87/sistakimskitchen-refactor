@@ -381,12 +381,6 @@ animation: orange-glow  5s ease-in-out infinite alternate;
   }
 }
 
-@media (max-width: 640px) {
-  .scrolling-review {
-    width: 400vw !important;
-  }
-}
-
 .scrolling-review-content{
  display: flex;
   width: 100% !important; 
@@ -424,12 +418,6 @@ animation: orange-glow  5s ease-in-out infinite alternate;
 @media (max-width: 768px) {
   .scrolling-review-content-bar-2 {
     left: 299vw !important;
-  }
-}
-
-@media (max-width: 640px) {
-  .scrolling-review-content-bar-2{
-    left: 399vw !important;
   }
 }
 
