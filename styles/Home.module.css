@@ -931,13 +931,14 @@ animation: orange-glow  5s ease-in-out infinite alternate;
   color: #fff;
   display: flex;
   justify-content: center;
+  padding-bottom: 3em;
 }
 
 @media (max-width: 1024px) {
   .menu{
     flex-direction: column;
     align-items: center;
-    padding: 0 2em;
+    padding: 2em 2em;
   }
 }
 
