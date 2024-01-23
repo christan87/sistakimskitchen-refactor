@@ -32,12 +32,12 @@ const HeroSlider = () => {
     const settings = {
       dots: true,
       infinite: true,
-      speed: 10000,
+      speed: 1000,
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows:false,
       autoplay: true,
-      autoplaySpeed: 10000, // Change this to your desired speed
+      autoplaySpeed: 12000, // Change this to your desired speed
       appendDots: dots => (
         <div
           style={{ 
