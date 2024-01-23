@@ -399,7 +399,8 @@ animation: orange-glow  5s ease-in-out infinite alternate;
 
 @media (max-width: 768px) {
   .slider-img-content h1 {
-    font-size: 1rem;
+    font-size: 1em;
+    padding: 0 1em ;
   }
 }
 
