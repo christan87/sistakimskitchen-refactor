@@ -31,6 +31,14 @@ import {
     sides
 } from './booking.js';
 
+import {
+    defaultKeywords,
+    menuKeywords,
+    locationsKeywords,
+    bookingKeywords,
+    siteDexcription,
+} from './keywords.js';
+
 export{
     loremIpsum01,
     pastramiCombo,
@@ -52,5 +60,10 @@ export{
     orderOnlineLink,
     meats,
     seafood,
-    sides
+    sides,
+    defaultKeywords,
+    menuKeywords,
+    locationsKeywords,
+    bookingKeywords,
+    siteDexcription
 }
