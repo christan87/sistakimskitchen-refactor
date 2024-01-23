@@ -404,6 +404,18 @@ animation: orange-glow  5s ease-in-out infinite alternate;
   }
 }
 
+.slider-img-content h2 {
+  font-weight: 700;
+  font-size: 1.5rem; 
+}
+
+@media (max-width: 1024px) {
+  .slider-img-content h2 {
+    font-size: 1em;
+    padding: 0 1em ;
+  }
+}
+
 .slider-img-content a {
   font-weight: 700;
   border: solid 2px #d2d2d2;
@@ -422,6 +434,15 @@ animation: orange-glow  5s ease-in-out infinite alternate;
   background-color: var(--brand-purple);
   border: solid 2px currentColor;
   transition: all ease-in-out 0.9s;
+}
+
+.slider-img-content-socials {
+  display: flex;
+  gap: 1.5em;
+}
+
+.slider-img-content-socials a {
+  border: none;
 }
 
 .slider-img-overlay{

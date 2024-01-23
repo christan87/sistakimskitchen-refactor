@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 // Import css files
@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "../../styles/Home.module.css";
 import Slider from "react-slick";
+import { FacebookIcon, InstagramIcon } from "../Icons";
 import {
     storefront,
     burger001,
@@ -18,6 +19,7 @@ import {
   sliderBlurb02,
   sliderBlurb03,
   sliderBlurb04,
+  sliderBlurb04Aside
 } from '../constants';
 
 const HeroSlider = () => {
@@ -30,12 +32,12 @@ const HeroSlider = () => {
     const settings = {
       dots: true,
       infinite: true,
-      speed: 1000,
+      speed: 10000,
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows:false,
       autoplay: true,
-      autoplaySpeed: 6000, // Change this to your desired speed
+      autoplaySpeed: 10000, // Change this to your desired speed
       appendDots: dots => (
         <div
           style={{ 
@@ -112,8 +114,13 @@ const HeroSlider = () => {
             <div className={`${styles['slider-img-overlay']}`}/>
             <Image src={fish001} alt="Slide 4 Catfish Combo With Yams and Mac and Cheese" layout='fill' objectFit='cover' objectPosition='50% 50%'/>
             <div className={`${styles["slider-img-content"]}`}>
-              <h1>{sliderBlurb03}</h1>
+              <h1>{sliderBlurb04}</h1>
               <Link href={`/booking#bottom`}>Contact Us</Link>
+              <h2>{sliderBlurb04Aside}</h2>
+              <div className={`${styles['slider-img-content-socials']}`}>
+                <Link href="https://www.instagram.com/sistakimskitchen/"><InstagramIcon color='white' width='30' height='30'className='nav-link-icon'/></Link>
+                <Link href="https://www.facebook.com/Sistakimskitchen/"><FacebookIcon color='white' width='30' height='30' className='nav-link-icon'/></Link>
+              </div>
             </div>
           </div>
         </Slider>

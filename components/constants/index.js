@@ -5,7 +5,8 @@ import {
     sliderBlurb01,
     sliderBlurb02,
     sliderBlurb03,
-    sliderBlurb04
+    sliderBlurb04,
+    sliderBlurb04Aside
 } from './landing.js';
 
 import {
@@ -38,6 +39,7 @@ export{
     sliderBlurb02,
     sliderBlurb03,
     sliderBlurb04,
+    sliderBlurb04Aside,
     footerAddress,
     footerPhoneNumber,
     footerCopyright,
