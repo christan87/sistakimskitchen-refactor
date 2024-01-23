@@ -22,7 +22,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className={`${styles['footer-copyright']}`}>
+            <div id='bottom' className={`${styles['footer-copyright']}`}>
                 <p>{footerCopyright}</p>
             </div>
         </div>

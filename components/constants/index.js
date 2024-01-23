@@ -1,7 +1,11 @@
 import {
     loremIpsum01,
     pastramiCombo,
-    shrimpPoBoiCombo
+    shrimpPoBoiCombo,
+    sliderBlurb01,
+    sliderBlurb02,
+    sliderBlurb03,
+    sliderBlurb04
 } from './landing.js';
 
 import {
@@ -30,6 +34,10 @@ export{
     loremIpsum01,
     pastramiCombo,
     shrimpPoBoiCombo,
+    sliderBlurb01,
+    sliderBlurb02,
+    sliderBlurb03,
+    sliderBlurb04,
     footerAddress,
     footerPhoneNumber,
     footerCopyright,
