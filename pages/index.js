@@ -157,7 +157,7 @@ export default function Home() {
             >
               <div className={`overflow-hidden`}>
                 <div className={`${styles['review-google']}`} >
-                  <Link href={googleReviews} className={`${styles['review-google-link']}`} >Read More Reviews</Link>
+                  <Link href={googleReviews} className={`${styles['review-google-link']}`} >Leave Us a Review!</Link>
                 </div>
                 <ScrollingReviews>
                   <Review review={reviews[0]} />
