@@ -88,13 +88,13 @@ const ContactForm = () => {
                 <div className={`flex flex-col mt-2 sm:flex-row sm:gap-2 ${styles['contact-form-content-date-time']}`}>
                     {formState.dropdown === 'Catering' && 
                         <div className={`${styles['contact-form-content-group']}`}>
-                            <h1>{`(Required)`}</h1>
+                            <h1>{`Date (Required)`}</h1>
                             <input className={`mt-1 sm:mt-0`} name='date' type='date' value={formState.date} onChange={handleChange} required/>
                         </div>
                     }
                     {formState.dropdown === 'Catering' && 
                         <div className={`${styles['contact-form-content-group']}`}>
-                            <h1>{`(Required)`}</h1>
+                            <h1>{`Time (Required)`}</h1>
                             <input className={`mt-2 sm:mt-0`} name='time' type='time' value={formState.time} onChange={handleChange} required/>
                         </div>
                     }
