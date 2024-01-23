@@ -93,7 +93,7 @@ const ContactForm = () => {
                         </div>
                     }
                     {formState.dropdown === 'Catering' && 
-                        <div className={`${styles['contact-form-content-group']}`}>
+                        <div className={`mt-2 ${styles['contact-form-content-group']}`}>
                             <h1>{`Time (Required)`}</h1>
                             <input className={`mt-2 sm:mt-0`} name='time' type='time' value={formState.time} onChange={handleChange} required/>
                         </div>

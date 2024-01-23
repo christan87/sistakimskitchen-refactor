@@ -711,6 +711,7 @@ animation: orange-glow  5s ease-in-out infinite alternate;
   height: 2em;
   border-radius: 5px;
   padding: 0 0.5em;
+  margin: 0;
   font-size: 1.25em;
 }
 
