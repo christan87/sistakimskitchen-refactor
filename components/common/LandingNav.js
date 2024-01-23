@@ -38,8 +38,10 @@ export default function LandingNav() {
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
         }
+        
         window.addEventListener('resize', handleResize);
         console.log('windowWidth: ', windowWidth);
+        handleResize();
         return () => {
             window.removeEventListener('resize', handleResize);
         }
@@ -47,9 +49,9 @@ export default function LandingNav() {
 
     return ( 
         <div>
-        <nav id="navbar" className={`fixed top-0 left-0 right-0 z-50 bg-slate-950 flex items-center justify-between pl-5 pr-5 sm:pl-10 sm:pr-10 ${windowWidth > 640 && `${styles['nav-collapse']}`}`}>
+        <nav id="navbar" className={`fixed top-0 left-0 right-0 z-50 bg-slate-950 flex items-center justify-between pl-5 pr-5 sm:pl-10 sm:pr-10 ${isScrolled && windowWidth > 640 ? `${styles['nav-expand']}` : `${styles['nav-collapse']}`}`}>
             
-            {windowWidth > 640 ?
+            {isScrolled && windowWidth > 640 ?
                 (
                 <Link href="/">    
                     <div className="flex items-center mr-2 transition-all duration-500 transform scale-100">
