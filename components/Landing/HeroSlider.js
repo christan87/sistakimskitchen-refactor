@@ -88,7 +88,7 @@ const HeroSlider = () => {
         <Slider {...settings} id="mySlider">
           <div className={`${styles["slider-img"]}`}>
             <div className={`${styles['slider-img-overlay']}`}/>
-            <Image src={storefront} alt="Slide 1 Watermelon Drink" layout='fill' objectFit='cover' objectPosition='50% 50%'/>
+            <Image priority={true} src={storefront} alt="Slide 1 Watermelon Drink" layout='fill' objectFit='cover' objectPosition='50% 50%'/>
             <div className={`${styles["slider-img-content"]}`}>
               <h1>{sliderBlurb01}</h1>
               <Link href={`/menu`}>Menu</Link>
@@ -96,7 +96,7 @@ const HeroSlider = () => {
           </div>
           <div className={`${styles["slider-img"]}`}>
             <div className={`${styles['slider-img-overlay']}`}/>
-            <Image src={burger001} alt="Slide 2 Cheese Burger" layout='fill' objectFit='cover' objectPosition='50% 30%'/>
+            <Image priority={true} src={burger001} alt="Slide 2 Cheese Burger" layout='fill' objectFit='cover' objectPosition='50% 30%'/>
             <div className={`${styles["slider-img-content"]}`}>
               <h1>{sliderBlurb02}</h1>
               <Link href={`/locations`}>Locations</Link>
@@ -104,7 +104,7 @@ const HeroSlider = () => {
           </div>
           <div className={`${styles["slider-img"]}`}>
             <div className={`${styles['slider-img-overlay']}`}/>
-            <Image src={ribs001} alt="Slide 3 Ribs" layout='fill' objectFit='cover' objectPosition='50% 50%'/>
+            <Image priority={true} src={ribs001} alt="Slide 3 Ribs" layout='fill' objectFit='cover' objectPosition='50% 50%'/>
             <div className={`${styles["slider-img-content"]}`}>
               <h1>{sliderBlurb03}</h1>
               <Link href={`/booking`}>Booking</Link>
@@ -112,7 +112,7 @@ const HeroSlider = () => {
           </div>
           <div className={`${styles["slider-img"]}`}>
             <div className={`${styles['slider-img-overlay']}`}/>
-            <Image src={fish001} alt="Slide 4 Catfish Combo With Yams and Mac and Cheese" layout='fill' objectFit='cover' objectPosition='50% 50%'/>
+            <Image priority={true} src={fish001} alt="Slide 4 Catfish Combo With Yams and Mac and Cheese" layout='fill' objectFit='cover' objectPosition='50% 50%'/>
             <div className={`${styles["slider-img-content"]}`}>
               <h1>{sliderBlurb04}</h1>
               <Link href={`/booking#bottom`}>Contact Us</Link>
