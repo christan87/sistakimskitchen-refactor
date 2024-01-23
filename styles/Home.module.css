@@ -112,21 +112,39 @@
 }
 
 .footer-nav-info-address{
-  margin-right: 5em;
+  margin-right: 4em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
 }
 
 @media (max-width: 645px) {
   .footer-nav-info-address{
+    margin-top: 0.5em;
     margin-right: 0;
+    text-align: center;
   }
 }
 
 .footer-nav-socials{
   display: flex;
+  gap: 1em;
+
+}
+
+@media (max-width: 645px) {
+  .footer-nav-socials{
+    margin: 0.5em 0;
+  }
 }
 
 .footer-copyright{
 
+}
+
+@media (max-width: 645px) {
+  .footer-copyright{
+    text-align: center;
+  }
 }
 
 /* ================ Drawer ================ */

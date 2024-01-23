@@ -5,7 +5,8 @@ import { FacebookIcon, InstagramIcon } from "../Icons";
 import {    
     footerAddress,
     footerPhoneNumber,
-    footerCopyright 
+    footerCopyright,
+    googleMaps 
 } from '../constants';
 
 const Footer = () => {
@@ -14,7 +15,7 @@ const Footer = () => {
             <div className={`${styles['footer-nav']}`}>
                 <div className={`${styles['footer-nav-info']}`}>
                     <p>{footerPhoneNumber}</p>
-                    <p className={`${styles['footer-nav-info-address']}`}>{footerAddress}</p>
+                    <Link href={googleMaps}><p className={`${styles['footer-nav-info-address']}`}>{footerAddress}</p></Link>
                     <div className={`${styles['footer-nav-socials']}`}>
                         <Link href="https://www.instagram.com/sistakimskitchen/"><InstagramIcon color='white' width='20' height='20'className='nav-link-icon'/></Link>
                         <Link href="https://www.facebook.com/Sistakimskitchen/"><FacebookIcon color='white' width='20' height='20' className='nav-link-icon'/></Link>
